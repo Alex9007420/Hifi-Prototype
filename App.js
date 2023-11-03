@@ -19,54 +19,50 @@
 //   },
 // });
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  Alert,
-} from 'react-native';
+import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity } from 'react-native';
 
-const recipes = [
-  { id: '1', title: 'Spaghetti Carbonara' },
-  { id: '2', title: 'Margherita Pizza' },
-  { id: '3', title: 'Classic Cheesecake' },
-  { id: '4', title: 'Caesar Salad' },
+// Dummy data for dashboard images
+const foodImages = [
+  { id: '1', src: 'https://picsum.photos/200/300?random=1' },
+  { id: '2', src: 'https://picsum.photos/200/300?random=2' },
+  { id: '3', src: 'https://picsum.photos/200/300?random=3' },
+  { id: '4', src: 'https://picsum.photos/200/300?random=4' },
+  { id: '5', src: 'https://picsum.photos/200/300?random=5' },
+  { id: '6', src: 'https://picsum.photos/200/300?random=6' },
+  // Add more if needed
 ];
 
 export default function App() {
-  const renderRecipeItem = ({ item }) => {
-    return (
-      <TouchableOpacity
-        style={styles.recipeItem}
-        onPress={() => Alert.alert('Recipe Pressed', `You pressed ${item.title}`)}
-      >
-        <Text style={styles.title}>{item.title}</Text>
-      </TouchableOpacity>
-    );
-  };
-
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Recipe App</Text>
-      <FlatList
-        data={recipes}
-        renderItem={renderRecipeItem}
-        keyExtractor={(item) => item.id}
-      />
+      {/* Search Bar Header */}
+      <View style={styles.searchContainer}>
+        <TextInput
+          placeholder="Search for recipes..."
+          style={styles.searchInput}
+        />
+      </View>
+
+      {/* Dashboard */}
+      <ScrollView contentContainerStyle={styles.dashboard}>
+        {foodImages.map((item) => (
+          <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} />
+        ))}
+      </ScrollView>
+
+      {/* Footer with Icons */}
       <View style={styles.footer}>
         <TouchableOpacity style={styles.iconContainer}>
           <Text style={styles.iconText}>🏠 Home</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.iconContainer}>
-          <Text style={styles.iconText}>🔍 Search</Text>
+          <Text style={styles.iconText}>📒 Notebook</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.iconContainer}>
-          <Text style={styles.iconText}>❤ Recipe Notebooks</Text>
+          <Text style={styles.iconText}>🍴 Menu</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.iconContainer}>
-          <Text style={styles.iconText}>👤 Setting</Text>
+          <Text style={styles.iconText}>⚙️ Settings</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -76,34 +72,38 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 50, // to ensure the content is not overlapped by status bar
+    marginTop: 30,
   },
-  header: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    textAlign: 'center',
+  searchContainer: {
+    padding: 10,
+    backgroundColor: '#fff',
   },
-  recipeItem: {
-    backgroundColor: 'white',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    borderRadius: 5,
-    elevation: 1,
-    shadowOpacity: 0.1,
-    shadowRadius: 1,
-    shadowOffset: { width: 0, height: 1 },
+  searchInput: {
+    height: 40,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 20,
+    paddingLeft: 10,
   },
-  title: {
-    fontSize: 18,
+  dashboard: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    padding: 5,
+  },
+  imageItem: {
+    height: 160,
+    margin: 5,
+    width: '45%', // Approximately 2 columns, depending on container width
+    borderRadius: 10,
   },
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingVertical: 30,
+    backgroundColor: '#fff',
     borderTopWidth: 1,
     borderTopColor: '#e1e1e1',
+    paddingVertical: 10,
+    paddingBottom: 20, // Padding to avoid overlap with home gesture
   },
   iconContainer: {
     alignItems: 'center',
