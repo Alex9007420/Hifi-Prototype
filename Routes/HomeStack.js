@@ -1,19 +1,18 @@
-import {createStackNavigator} from "@react-navigation/stack";
-import {createAppContainer}  from "@react-navigation/native";
+import { NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Search from "../screens/Search";
 import Home from "../screens/Home";
 
+const Stack = createNativeStackNavigator();
 
-const screens = {
-    Home: {
-        screen: Home
-    },
-    Search:{
-        screen: Search
-    }
-
+function Stacks() {
+  return(
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Searchbar" component={Search} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
-
-const HomeStack = createStackNavigator(screens);
-
-export default createAppContainer(HomeStack);
+export default Stacks;

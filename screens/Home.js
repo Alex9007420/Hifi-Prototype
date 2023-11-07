@@ -1,69 +1,103 @@
-// Home.js
-import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  SafeAreaView,
-  ActivityIndicator,
-} from "react-native";
+// import { StatusBar } from 'expo-status-bar';
+// import { StyleSheet, Text, View } from 'react-native';
 
-import List from "../components/List";
-import SearchBar from "../components/SearchBar";
+// export default function App() {
+//   return (
+//     <View style={styles.container}>
+//       <Text>Open up App.js to start working on your app!</Text>
+//       <StatusBar style="auto" />
+//     </View>
+//   );
+// }
 
-const Home = () => {
-  const [searchPhrase, setSearchPhrase] = useState("");
-  const [clicked, setClicked] = useState(false);
-  const [fakeData, setFakeData] = useState();
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
+import React from 'react';
+import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
+import Infoscreen from './InfoScreen';
+import CookScreen from './CookScreen';
+import MenuScreen from './MenuScreen';
+import SettingsScreen from './SettingsScreen';
 
-  // get data from the fake api
-  useEffect(() => {
-    const getData = async () => {
-      const apiResponse = await fetch(
-        "https://my-json-server.typicode.com/kevintomas1995/logRocket_searchBar/languages"
-      );
-      const data = await apiResponse.json();
-      setFakeData(data);
-    };
-    getData();
-  }, []);
 
+const Tab = createBottomTabNavigator();
+
+export default function Home() {
   return (
-    <SafeAreaView style={styles.root}>
-      {!clicked && <Text style={styles.title}>Programming Languages</Text>}
+      <Tab.Navigator initialRouteName="Info">
+          
+        <Tab.Screen
+        name= "Info"
+        component={Infoscreen}
+        ></Tab.Screen>
 
-      <SearchBar
-        searchPhrase={searchPhrase}
-        setSearchPhrase={setSearchPhrase}
-        clicked={clicked}
-        setClicked={setClicked}
-      />
-      {!fakeData ? (
-        <ActivityIndicator size="large" />
-      ) : (
-        
-          <List
-            searchPhrase={searchPhrase}
-            data={fakeData}
-            setClicked={setClicked}
-          />
-        
-      )}
-    </SafeAreaView>
+        <Tab.Screen 
+        name= "Cookbook"
+        component={CookScreen}
+        ></Tab.Screen>
+
+        <Tab.Screen
+        name='menu'
+        component={MenuScreen}
+        ></Tab.Screen>
+
+        <Tab.Screen
+        name='"Settings'
+        component={SettingsScreen}
+        ></Tab.Screen>
+      </Tab.Navigator>
+      
+      
   );
-};
-
-export default Home;
+}
 
 const styles = StyleSheet.create({
-  root: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    width: "100%",
-    marginTop: 20,
-    fontSize: 25,
-    fontWeight: "bold",
-    marginLeft: "10%",
-  },
+container: {
+  flex: 1,
+  marginTop: 30,
+},
+searchContainer: {
+  padding: 10,
+  backgroundColor: '#fff',
+},
+searchInput: {
+  height: 40,
+  backgroundColor: '#f0f0f0',
+  borderRadius: 20,
+  paddingLeft: 10,
+},
+dashboard: {
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  padding: 5,
+},
+imageItem: {
+  height: 160,
+  margin: 5,
+  width: '45%', // Approximately 2 columns, depending on container width
+  borderRadius: 10,
+},
+footer: {
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  backgroundColor: '#fff',
+  borderTopWidth: 1,
+  borderTopColor: '#e1e1e1',
+  paddingVertical: 10,
+  paddingBottom: 20, // Padding to avoid overlap with home gesture
+},
+iconContainer: {
+  alignItems: 'center',
+},
+iconText: {
+  fontSize: 16,
+},
 });
