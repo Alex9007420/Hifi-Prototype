@@ -9,11 +9,12 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Recipe({route}){
     return (
-        <View style={styles.dashboard}>
+        <ScrollView contentContainerStyle={styles.dashboard}>
             <Text >
                 {route.params.name}
             </Text>
-        </View>
+            <Image style={styles.imageItem} source={{ uri: route.params.src }}/>
+        </ScrollView>
     )
 }
 const styles = StyleSheet.create({

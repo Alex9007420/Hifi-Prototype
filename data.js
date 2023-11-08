@@ -2,14 +2,14 @@ const RecipeData =[
   {
     id: "1",
     name: "Pizza Margheritta",
-    details: "Flour dough, Basic marinara, Mozarella",
+    details: ["Flour dough ", "Basic marinara ", "Mozarella"],
     time: "30",
     src: 'https://picsum.photos/200/300?random=1',
   },
   {
     id: "2",
     name: "Python",
-    details: "BackEnd, Data Science",
+    details: ["BackEnd", "Data Science"],
     time: "300",
     src: 'https://picsum.photos/200/300?random=2',
 
@@ -17,7 +17,7 @@ const RecipeData =[
   {
     id: "3",
     name: "Java",
-    details: "App Dev, E-Commerce",
+    details: ["App Dev", "E-Commerce"],
     time: "50",
     src: 'https://picsum.photos/200/300?random=3',
 
@@ -25,7 +25,7 @@ const RecipeData =[
   {
     id: "4",
     name: "SQL",
-    details: "Databases",
+    details: ["Databases"],
     time: "60",
     src: 'https://picsum.photos/200/300?random=4',
 
@@ -33,7 +33,7 @@ const RecipeData =[
   {
     id: "5",
     name: "NoSQL",
-    details: "Databases",
+    details: ["Databases"],
     time: "550",
     src: 'https://picsum.photos/200/300?random=5',
 
@@ -41,7 +41,7 @@ const RecipeData =[
   {
     id: "6",
     name: "C#",
-    details: "Game Dev, Desktop Apps, Mobile Apps",
+    details: ["Game Dev", "Desktop Apps", "Mobile Apps"],
     time: "10",
     src: 'https://picsum.photos/200/300?random=6',
 
@@ -49,7 +49,7 @@ const RecipeData =[
   {
     id: "7",
     name: "Rust",
-    details: "Operating Systems, VR, Web Browsers",
+    details: ["Operating Systems", "VR", "Web Browsers"],
     time: "520",
     src: 'https://picsum.photos/200/300?random=7',
 
@@ -57,7 +57,7 @@ const RecipeData =[
   {
     id: "8",
     name: "Perl",
-    details: "System Administration, GUI Development",
+    details: ["System Administration", "GUI Development"],
     time: "230",
     src: 'https://picsum.photos/200/300?random=8',
 
@@ -65,7 +65,7 @@ const RecipeData =[
   {
     id: "9",
     name: "GO",
-    details: "System Programming, Audio Editing, Big Data",
+    details: ["System Programming", "Audio Editing", "Big Data"],
     time: "380",
     src: 'https://picsum.photos/200/300?random=9',
 
