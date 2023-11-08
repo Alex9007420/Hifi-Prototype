@@ -9,23 +9,15 @@ import {
 
 import List from "../components/List";
 import SearchBar from "../components/SearchBar";
+import RecipeData from "../data";
 
 const Search = () => {
   const [searchPhrase, setSearchPhrase] = useState("");
   const [clicked, setClicked] = useState(false);
-  const [fakeData, setFakeData] = useState();
 
-  // get data from the fake api
-  useEffect(() => {
-    const getData = async () => {
-      const apiResponse = await fetch(
-        "https://my-json-server.typicode.com/kevintomas1995/logRocket_searchBar/languages"
-      );
-      const data = await apiResponse.json();
-      setFakeData(data);
-    };
-    getData();
-  }, []);
+
+
+  
 
   return (
     <SafeAreaView style={styles.root}>
@@ -37,17 +29,12 @@ const Search = () => {
         clicked={clicked}
         setClicked={setClicked}
       />
-      {!fakeData ? (
-        <ActivityIndicator size="large" />
-      ) : (
-        
           <List
             searchPhrase={searchPhrase}
-            data={fakeData}
+            data={RecipeData}
             setClicked={setClicked}
           />
         
-      )}
     </SafeAreaView>
   );
 };

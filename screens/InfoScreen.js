@@ -1,16 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
+import RecipeData from '../data';
 
-// Dummy data for dashboard images
-const foodImages = [
-    { id: '1', src: 'https://picsum.photos/200/300?random=1' },
-    { id: '2', src: 'https://picsum.photos/200/300?random=2' },
-    { id: '3', src: 'https://picsum.photos/200/300?random=3' },
-    { id: '4', src: 'https://picsum.photos/200/300?random=4' },
-    { id: '5', src: 'https://picsum.photos/200/300?random=5' },
-    { id: '6', src: 'https://picsum.photos/200/300?random=6' },
-    // Add more if needed
-  ];
+
 
 
   export default function Infoscreen ({navigation}){ 
@@ -27,8 +19,17 @@ const foodImages = [
 
       {/* Dashboard */}
       <ScrollView contentContainerStyle={styles.dashboard}>
-        {foodImages.map((item) => (
-          <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} />
+          {RecipeData.map((item) => (
+            <Pressable style={styles.dashboard}
+            onPress={()=> navigation.navigate("Recipe", {
+              name: item.name,
+              details: item.details,
+              time: item.time,
+              src: item.src,
+            })}>
+              <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} />
+            </Pressable>
+          
         ))}
       </ScrollView>
     </View>
