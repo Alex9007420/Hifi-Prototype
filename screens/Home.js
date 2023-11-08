@@ -69,7 +69,7 @@ export default function Home() {
         component={SettingsScreen}
         options= {{
       tabBarIcon: () =>(
-        <MaterialCommunityIcons name='details' size={20}/>
+        <MaterialCommunityIcons name='cog' size={20}/>
             
       )}}
         ></Tab.Screen>

@@ -13,13 +13,13 @@ const foodImages = [
   ];
 
 
-  export default function Infoscreen ({navigation}){
+  export default function Infoscreen ({navigation}){ {/*You need to put this in the function if you want to navigate (everything you need to do to be able to navigate)*/}
     return(
         <View style={styles.container}>
       {/* Search Bar Header */}
       <View style={styles.searchContainer}>
         <Pressable style={styles.searchContainer}
-        onPress={()=> navigation.navigate("Searchbar")}>
+        onPress={()=> navigation.navigate("Searchbar")}> {/*navigates you to the SearchBar*/}
          <Text> Search for Recipes...</Text>
         </Pressable>
       </View>
