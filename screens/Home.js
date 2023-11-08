@@ -25,32 +25,53 @@ import Infoscreen from './InfoScreen';
 import CookScreen from './CookScreen';
 import MenuScreen from './MenuScreen';
 import SettingsScreen from './SettingsScreen';
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
 export default function Home() {
   return (
-      <Tab.Navigator initialRouteName="Info">
+      <Tab.Navigator initialRouteName="Info" 
+      screenOptions={{ headerShown: false }}>
           
         <Tab.Screen
         name= "Info"
         component={Infoscreen}
+        options= {{title: "Home" , 
+      tabBarIcon: () =>(
+        <MaterialCommunityIcons name='home' size={20}/>
+            
+      )}}
         ></Tab.Screen>
 
         <Tab.Screen 
-        name= "Cookbook"
+        name= "Notebook"
         component={CookScreen}
+        options= {{ 
+      tabBarIcon: () =>(
+        <MaterialCommunityIcons name='home' size={20}/>
+            
+      )}}
         ></Tab.Screen>
 
         <Tab.Screen
-        name='menu'
+        name='Menu'
         component={MenuScreen}
+        options= {{ 
+      tabBarIcon: () =>(
+        <MaterialCommunityIcons name='home' size={20}/>
+            
+      )}}
         ></Tab.Screen>
 
         <Tab.Screen
-        name='"Settings'
+        name='Settings'
         component={SettingsScreen}
+        options= {{
+      tabBarIcon: () =>(
+        <MaterialCommunityIcons name='details' size={20}/>
+            
+      )}}
         ></Tab.Screen>
       </Tab.Navigator>
       
