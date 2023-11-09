@@ -8,8 +8,6 @@ import IngredientsData from '../IngredientsData';
 
 export default function Ingredients({category}){
     const iData = IngredientsData.filter((item) => item.category == category);
-    console.log(category)
-    iData.map((item) => console.log(item.id))
     return(
        <View style={styles.searchContainer}>
             
