@@ -1,41 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
-import Infoscreen from './InfoScreen';
-import CookScreen from './CookScreen';
-import MenuScreen from './MenuScreen';
-import SettingsScreen from './SettingsScreen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import Tools from '../components/Tools';
+import { FlatList } from 'react-native-gesture-handler';
 import RecipeData from '../data';
-import Ingredients from '../components/Ingredients';
-import IngredientsData from '../IngredientsData';
 
-
-export default function Recipe({route}){
-  const Data = RecipeData.find((item) => item.id == route.params.id);
-  const iData = IngredientsData.filter((item) => Data.ingredients.includes(item.id));
-    return (
-        <ScrollView>
-           <Text >
-                {Data.name}
-            </Text>
-            <Image style={styles.imageItem} source={{ uri: Data.src}}/>
-        <Tools index={Data.id}/>
-        <Text >
-          Time:
-                {Data.time}
-        </Text>
-
-        {Data.ingredients.map((item) => (
-          <View>
-              <Text> {item}</Text>
-              <Ingredients category={item}/>
-          </View>
-              
+export default function Tools({index}){
+    const Data = RecipeData.find((item) => item.id == index)
+    return(
+        <View style={styles.container}>
+            {Data.tools.map((bla) => (
+            <MaterialCommunityIcons name={bla} size={50}/>
             ))}
-
-        </ScrollView>
+        </View>
+        
     )
 }
 const styles = StyleSheet.create({
@@ -81,3 +59,4 @@ const styles = StyleSheet.create({
       fontSize: 16,
     },
     });
+

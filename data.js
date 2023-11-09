@@ -5,6 +5,8 @@ const RecipeData =[
     details: ["Flour dough ", "Basic marinara ", "Mozarella"],
     time: "30",
     src: 'https://picsum.photos/200/300?random=1',
+    tools: ["cog"],
+    ingredients: ["Dough", "Sauce", "Toppings"],
   },
   {
     id: "2",
@@ -12,7 +14,8 @@ const RecipeData =[
     details: ["BackEnd", "Data Science"],
     time: "300",
     src: 'https://picsum.photos/200/300?random=2',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
   {
     id: "3",
@@ -20,7 +23,8 @@ const RecipeData =[
     details: ["App Dev", "E-Commerce"],
     time: "50",
     src: 'https://picsum.photos/200/300?random=3',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
   {
     id: "4",
@@ -28,7 +32,8 @@ const RecipeData =[
     details: ["Databases"],
     time: "60",
     src: 'https://picsum.photos/200/300?random=4',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
   {
     id: "5",
@@ -36,7 +41,8 @@ const RecipeData =[
     details: ["Databases"],
     time: "550",
     src: 'https://picsum.photos/200/300?random=5',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
   {
     id: "6",
@@ -44,7 +50,8 @@ const RecipeData =[
     details: ["Game Dev", "Desktop Apps", "Mobile Apps"],
     time: "10",
     src: 'https://picsum.photos/200/300?random=6',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
   {
     id: "7",
@@ -52,7 +59,8 @@ const RecipeData =[
     details: ["Operating Systems", "VR", "Web Browsers"],
     time: "520",
     src: 'https://picsum.photos/200/300?random=7',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
   {
     id: "8",
@@ -60,7 +68,8 @@ const RecipeData =[
     details: ["System Administration", "GUI Development"],
     time: "230",
     src: 'https://picsum.photos/200/300?random=8',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
   {
     id: "9",
@@ -68,7 +77,10 @@ const RecipeData =[
     details: ["System Programming", "Audio Editing", "Big Data"],
     time: "380",
     src: 'https://picsum.photos/200/300?random=9',
-
+    tools: ["cog"],
+    ingredients: ["Dough"],
   },
 ];
+
 export default RecipeData;
+

@@ -1,47 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
-import Infoscreen from './InfoScreen';
-import CookScreen from './CookScreen';
-import MenuScreen from './MenuScreen';
-import SettingsScreen from './SettingsScreen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import Tools from '../components/Tools';
+import { FlatList } from 'react-native-gesture-handler';
 import RecipeData from '../data';
-import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 
-
-export default function Recipe({route}){
-  const Data = RecipeData.find((item) => item.id == route.params.id);
-  const iData = IngredientsData.filter((item) => Data.ingredients.includes(item.id));
-    return (
-        <ScrollView>
-           <Text >
-                {Data.name}
-            </Text>
-            <Image style={styles.imageItem} source={{ uri: Data.src}}/>
-        <Tools index={Data.id}/>
-        <Text >
-          Time:
-                {Data.time}
-        </Text>
-
-        {Data.ingredients.map((item) => (
-          <View>
-              <Text> {item}</Text>
-              <Ingredients category={item}/>
-          </View>
-              
+export default function Ingredients({category}){
+    const iData = IngredientsData.filter((item) => item.category == category);
+    console.log(category)
+    iData.map((item) => console.log(item.id))
+    return(
+       <View style={styles.searchContainer}>
+            
+            {iData.map((item) => (
+                <ScrollView horizontal={true} >
+                <Ingredient index={item.id}/>
+                </ScrollView>
             ))}
-
-        </ScrollView>
-    )
+            
+      </View>  
+    );
+}
+const Ingredient = ({index}) =>{
+    const iData = IngredientsData.find((item) => item.id == index)
+    return(
+        <View style={styles.container}>
+            <Text>
+                {iData.name}
+            </Text>
+            <Image style={styles.imageItem} source={{ uri: iData.src}}/>
+            {iData.ingredients.map((bla) => (
+                <Text>
+                    {bla}
+                </Text>
+            ))}
+        </View>
+    );
 }
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       marginTop: 30,
+      backgroundColor: '#f0f0f0',
     },
     searchContainer: {
       padding: 10,
@@ -81,3 +82,4 @@ const styles = StyleSheet.create({
       fontSize: 16,
     },
     });
+

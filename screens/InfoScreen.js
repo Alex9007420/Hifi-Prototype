@@ -22,10 +22,7 @@ import RecipeData from '../data';
           {RecipeData.map((item) => (
             <Pressable style={styles.dashboard}
             onPress={()=> navigation.navigate("Recipe", {
-              name: item.name,
-              details: item.details,
-              time: item.time,
-              src: item.src,
+              id: item.id
             })}>
               <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} />
             </Pressable>
