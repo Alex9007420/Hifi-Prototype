@@ -5,13 +5,14 @@ import {
   Text,
   SafeAreaView,
   ActivityIndicator,
+  Pressable,
 } from "react-native";
 
 import List from "../components/List";
 import SearchBar from "../components/SearchBar";
 import RecipeData from "../data";
 
-const Search = () => {
+export default function Search ({navigation}) {
   const [searchPhrase, setSearchPhrase] = useState("");
   const [clicked, setClicked] = useState(false);
 
@@ -23,6 +24,12 @@ const Search = () => {
     <SafeAreaView style={styles.root}>
       {!clicked && <Text style={styles.title}>Programming Languages</Text>}
 
+      <Pressable style={styles.title}
+        onPress={()=> navigation.navigate("Home")}> 
+         <Text> pleaseeeeeeeeeeeeeeeeeeeeeeeeeeeee</Text>
+        </Pressable>
+      
+
       <SearchBar
         searchPhrase={searchPhrase}
         setSearchPhrase={setSearchPhrase}
@@ -33,13 +40,16 @@ const Search = () => {
             searchPhrase={searchPhrase}
             data={RecipeData}
             setClicked={setClicked}
+            navigationf={(index)=> navigation.navigate("Recipe", {
+              id: index
+            })}
           />
         
     </SafeAreaView>
   );
 };
 
-export default Search;
+
 
 const styles = StyleSheet.create({
   root: {

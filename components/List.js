@@ -10,30 +10,32 @@ import {
 } from "react-native";
 
 // definition of the Item, which will be rendered in the FlatList
-const Item = ({ name, details }) => (
-  <View style={styles.item}>
+const Item = ({ name, details, index, oncf }) => (
+  <Pressable style={styles.searchContainer}
+  onPress={()=> oncf(index)}>
     <Text style={styles.title}>{name}</Text>
     <Text style={styles.details}>{details}</Text>
-  </View>
+  </Pressable>
 );
 
+
+
 // the filter
-const List = (props) => {
+export default function List (props){
   const renderItem = ({ item }) => {
     // when no input, show all
     if (props.searchPhrase === "") {
-      return <Item name={item.name} details={item.details} />;
+      return <Item name={item.name} details={item.details} index={item.id} oncf={props.navigationf}/>;
     }
     // filter of the name
     if (item.name.toUpperCase().includes(props.searchPhrase.toUpperCase().trim().replace(/\s/g, ""))) {
-      return <Item name={item.name} details={item.details} />;
+      return <Item name={item.name} details={item.details} index={item.id} oncf={props.navigationf}/>;
     }
     // filter of the description
-    if (item.details.toUpperCase().includes(props.searchPhrase.toUpperCase().trim().replace(/\s/g, ""))) {
-      return <Item name={item.name} details={item.details} />;
-    }
+    if (item.details.toString().toUpperCase().includes(props.searchPhrase.toUpperCase().trim().replace(/\s/g, ""))) {
+      return <Item name={item.name} details={item.details} index={item.id} oncf={props.navigationf}/>;
   };
-
+  }
   return (
     <SafeAreaView style={styles.list__container}>
       <View
@@ -41,15 +43,7 @@ const List = (props) => {
           props.setClicked(false);
         }}
       >
-        {/*{props.data.map((item) => (
-            <Pressable style={styles.dashboard}
-            onPress={()=> navigation.navigate("Recipe", {
-              id: item.id
-            })}>
-              <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} />
-            </Pressable>
-          
-        ))}*/}
+        
         <FlatList
           data={props.data}
           renderItem={renderItem}
@@ -60,7 +54,7 @@ const List = (props) => {
   );
 };
 
-export default List;
+
 
 const styles = StyleSheet.create({
   list__container: {
@@ -78,5 +72,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 5,
     fontStyle: "italic",
+  },
+  container: {
+    flex: 1,
+    marginTop: 30,
+  },
+  searchContainer: {
+    padding: 10,
+    backgroundColor: '#fff',
   },
 });
