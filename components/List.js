@@ -5,6 +5,8 @@ import {
   View,
   FlatList,
   SafeAreaView,
+  Pressable,
+  Image,
 } from "react-native";
 
 // definition of the Item, which will be rendered in the FlatList
@@ -39,6 +41,15 @@ const List = (props) => {
           props.setClicked(false);
         }}
       >
+        {/*{props.data.map((item) => (
+            <Pressable style={styles.dashboard}
+            onPress={()=> navigation.navigate("Recipe", {
+              id: item.id
+            })}>
+              <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} />
+            </Pressable>
+          
+        ))}*/}
         <FlatList
           data={props.data}
           renderItem={renderItem}

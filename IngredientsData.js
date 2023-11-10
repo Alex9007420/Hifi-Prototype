@@ -16,7 +16,21 @@ const IngredientsData =[
     {
         id: 3,
         category: "Toppings",
-        name: "Toppings",
+        name: "dog",
+        ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
+        picture: 'https://picsum.photos/200/300?random=10',
+    },
+    {
+        id: 4,
+        category: "Dough",
+        name: "fish",
+        ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
+        picture: 'https://picsum.photos/200/300?random=10',
+    },
+    {
+        id: 5,
+        category: "Dough",
+        name: "bla",
         ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
         picture: 'https://picsum.photos/200/300?random=10',
     },

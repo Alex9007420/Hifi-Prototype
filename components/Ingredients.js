@@ -10,12 +10,11 @@ export default function Ingredients({category}){
     const iData = IngredientsData.filter((item) => item.category == category);
     return(
        <View style={styles.searchContainer}>
-            
+            <ScrollView horizontal={true} >
             {iData.map((item) => (
-                <ScrollView horizontal={true} >
                 <Ingredient index={item.id}/>
-                </ScrollView>
             ))}
+            </ScrollView>
             
       </View>  
     );
