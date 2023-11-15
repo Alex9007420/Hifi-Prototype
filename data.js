@@ -5,7 +5,7 @@ const RecipeData =[
     details: ["Flour dough ", "Basic marinara ", "Mozarella"],
     time: "30",
     src: 'https://picsum.photos/200/300?random=1',
-    tools: ["cog"],
+    tools: ["cog", "cog"],
     ingredients: ["Dough", "Sauce", "Toppings"],
   },
   {
