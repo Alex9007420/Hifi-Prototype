@@ -17,7 +17,7 @@ export default function Recipe({route}){
   // const iData = IngredientsData.filter((item) => Data.ingredients.includes(item.id));
   return (
     <ScrollView>
-      <Text style="recipeHeader">{Data.name}</Text>
+      <Text style={styles.recipeHeader}>{Data.name}</Text>
       <Image style={styles.imageItem} source={{ uri: Data.src}}/>
       {
         Data.details.map((item) => <Text>Detail: {item}</Text>)
