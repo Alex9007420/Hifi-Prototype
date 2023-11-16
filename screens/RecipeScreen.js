@@ -12,7 +12,7 @@ import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 
 
-export default function Recipe({route}){
+export default function Recipe({route, navigation}){
   const Data = RecipeData.find((item) => item.id == route.params.id);
   // const iData = IngredientsData.filter((item) => Data.ingredients.includes(item.id));
   return (
@@ -30,6 +30,14 @@ export default function Recipe({route}){
           <Ingredients category={item}/>
         </View>
       ))}
+      <Pressable style={styles.dashboard}
+        onPress={()=> navigation.navigate("CookingMode", {
+          id: Data.id
+        })}>
+        <View style={styles.iconContainer}>
+         <Text style={styles.iconText}>Cooking Mode</Text>
+        </View>
+      </Pressable>
     </ScrollView>
   )
 }

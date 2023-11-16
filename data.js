@@ -15,7 +15,7 @@ const RecipeData =[
     time: "300",
     src: 'https://picsum.photos/200/300?random=2',
     tools: ["cog"],
-    ingredients: ["Dough"],
+    ingredients: ["Sauce"],
   },
   {
     id: "3",
@@ -24,7 +24,7 @@ const RecipeData =[
     time: "50",
     src: 'https://picsum.photos/200/300?random=3',
     tools: ["cog"],
-    ingredients: ["Dough"],
+    ingredients: ["Toppings"],
   },
   {
     id: "4",

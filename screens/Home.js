@@ -66,16 +66,6 @@ export default function Home() {
         ></Tab.Screen>
 
         <Tab.Screen
-        name='CookingMode'
-        component={CookingMode}
-        options= {{ 
-      tabBarIcon: () =>(
-        <MaterialCommunityIcons name='home' size={20}/>
-            
-      )}}
-        ></Tab.Screen>
-
-        <Tab.Screen
         name='Settings'
         component={SettingsScreen}
         options= {{

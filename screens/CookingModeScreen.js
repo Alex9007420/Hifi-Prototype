@@ -10,34 +10,34 @@ import RecipeData from '../data';
 import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 // TODO: only import what is actually needed
+const {width, height} = Dimensions.get('window')
 
-export default function CookingMode (){
-    // const Data = RecipeData.find((item) => item.id == 1);
+export default function CookingMode ({route}){
+    const Data = RecipeData.find((item) => item.id == route.params.id);
     return (
         <FlatList
             horizontal //={true}
             pagingEnabled //={true}
-            data={RecipeData}
-            contentContainerStyle={styles.CookingMode}
-            keyExtractor={RecipeData => RecipeData.id}
+            data={IngredientsData}
+            contentContainerStyle={{alignItems: "stretch"}}
+            style={styles.CookingMode}
+            keyExtractor={IngredientsData => IngredientsData.id}
             showsHorizontalScrollIndicator={false}
             renderItem={({item}) => {
-                return (
-                    <View style={styles.imageContainer}>
-                        <Image style={styles.image} source={{uri: item.src}} />
-                        <ScrollView contentContainerStyle={styles.CookingMode}>
-                            <Text >
-                                {item.name}
-                            </Text>
-                            {item.ingredients.map((item) => (
-                            <View>
-                                <Text> {item}</Text>
-                                <Ingredients category={item}/>
-                            </View> 
-                            ))}
-                        </ScrollView>
-                    </View>
-                );
+              const steps = IngredientsData.find((item) => item.category == Data.ingredients[0]);
+              return (
+                  <View style={styles.imageContainer}>
+                      <Image style={styles.image} source={{uri: steps.picture}} />
+                      <ScrollView contentContainerStyle={styles.CookingMode}>
+                          <Text >
+                              {steps.name}
+                          </Text>
+                          <View>
+                            <Ingredients category={steps.category}/>
+                          </View>
+                      </ScrollView>
+                  </View>
+              );
             }}
         />
     ) ;
@@ -61,9 +61,9 @@ const styles = StyleSheet.create({
       paddingLeft: 10,
     },
     dashboard: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
+      // flexDirection: 'row',
+      // flexWrap: 'wrap',
+      // justifyContent: 'space-around',
       padding: 5,
     },
     imageItem: {
@@ -88,36 +88,16 @@ const styles = StyleSheet.create({
       fontSize: 16,
     },
     CookingMode: {
-        // no width with flexlist, otherwise it does not work
-        padding: 5,
-        backgroundColor: '#0a0',
+        width: width, // important for flatlist
+        paddingToppadding: 0,
+        backgroundColor: '#080',
     },
     imageContainer: {
-        //height: 150,
-        margin: 17,
-        width: Dimensions.get("window"),
+        flex: 1, // important for flatlist
+        width: width,
     },
     image: {
         height: 120,
         // width: '100%', 
     },
     });
-
-
-
-// Stuff that did not work
-
-// HomeStack.js
-// import CookingMode from '../screens/CookingmodeScreen';
-// ...
-//        <Stack.Screen name="CookingMode" component={CookingMode} />
-
-// Taken from RecipeScreen.js
-//     <Pressable style={styles.dashboard}
-//     onPress={()=> route.navigation.navigate("CookingMode", {
-//       id: Data.id
-//     })}>
-//       <View style={styles.iconContainer}>
-//         <Text style={styles.iconText}>Cooking Mode</Text>
-//       </View>
-//   </Pressable>
