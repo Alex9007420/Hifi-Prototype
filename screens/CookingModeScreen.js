@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, View, Text, FlatList, Dimensions, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Infoscreen from './InfoScreen';
@@ -13,27 +13,32 @@ import IngredientsData from '../IngredientsData';
 const {width, height} = Dimensions.get('window')
 
 export default function CookingMode ({route}){
-    const Data = RecipeData.find((item) => item.id == route.params.id);
+    const ids = route.params.ids;
+    console.log(ids);
+   
+    const Data = IngredientsData.filter((item) => route.params.ids.includes(item.id));
+    console.log(Data.length)
+    
     return (
         <FlatList
             horizontal //={true}
             pagingEnabled //={true}
-            data={IngredientsData}
+            data={Data}
             contentContainerStyle={{alignItems: "stretch"}}
             style={styles.CookingMode}
             keyExtractor={IngredientsData => IngredientsData.id}
             showsHorizontalScrollIndicator={false}
             renderItem={({item}) => {
-              const steps = IngredientsData.find((item) => item.category == Data.ingredients[0]);
+              //const steps = IngredientsData.find((item) => item.category == Data.ingredients[0]);
               return (
                   <View style={styles.imageContainer}>
-                      <Image style={styles.image} source={{uri: steps.picture}} />
+                      <Image style={styles.image} source={{uri: item.picture}} />
                       <ScrollView contentContainerStyle={styles.CookingMode}>
                           <Text >
-                              {steps.name}
+                              {item.name}
                           </Text>
-                          <View>
-                            <Ingredients category={steps.category}/>
+                          <View style={styles.searchContainer}>
+                            <Ingredient index={item.id}/>
                           </View>
                       </ScrollView>
                   </View>
@@ -42,6 +47,19 @@ export default function CookingMode ({route}){
         />
     ) ;
 }
+const Ingredient = ({ index }) => {
+  const iData = IngredientsData.find((item) => item.id === index);
+
+  return (
+    <View style={styles.container}>
+      <Text>{iData.name}</Text>
+      <Image style={styles.imageItem} source={{ uri: iData.src }} />
+      {iData.ingredients.map((bla, index) => (
+        <Text key={index}>{bla}</Text>
+      ))}
+    </View>
+  );
+};
 
 
 // TODO: add correct styles; just copy pasted the styles for now

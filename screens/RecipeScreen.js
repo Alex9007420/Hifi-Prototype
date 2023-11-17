@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Infoscreen from './InfoScreen';
@@ -15,6 +15,7 @@ import IngredientsData from '../IngredientsData';
 export default function Recipe({route, navigation}){
   const Data = RecipeData.find((item) => item.id == route.params.id);
   // const iData = IngredientsData.filter((item) => Data.ingredients.includes(item.id));
+  const [cookingIng, setcookingIng] = useState([]);
   return (
     <ScrollView>
       <Text style={styles.recipeHeader}>{Data.name}</Text>
@@ -27,12 +28,12 @@ export default function Recipe({route, navigation}){
       { Data.ingredients.map((item) => (
         <View>
           <Text>{item}</Text>
-          <Ingredients category={item}/>
+          <Ingredients category={item} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
         </View>
       ))}
       <Pressable style={styles.dashboard}
         onPress={()=> navigation.navigate("CookingMode", {
-          id: Data.id
+          ids: cookingIng
         })}>
         <View style={styles.iconContainer}>
          <Text style={styles.iconText}>Cooking Mode</Text>

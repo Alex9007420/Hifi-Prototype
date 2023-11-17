@@ -1,4 +1,5 @@
-import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
+import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions } from 'react-native';
+const {width, height} = Dimensions.get('window')
 
 const styles = StyleSheet.create({
     container: {
@@ -43,5 +44,31 @@ const styles = StyleSheet.create({
     iconText: {
       fontSize: 16,
     },
+    imageItem: {
+      height: 160,
+      margin: 5,
+      width: '45%', // Approximately 2 columns, depending on container width
+      borderRadius: 10,
+    },iconContainer: {
+      alignItems: 'center',
+    },
+    CookingMode: {
+        width: width, // important for flatlist
+        paddingToppadding: 0,
+        backgroundColor: '#080',
+    },
+    imageContainer: {
+        flex: 1, // important for flatlist
+        width: width,
+    },
+    image: {
+        height: 120,
+        // width: '100%', 
+    },
+    CookingMode: {
+      width: width, // important for flatlist
+      paddingToppadding: 0,
+      backgroundColor: '#080',
+  },
     });
     export default styles;
