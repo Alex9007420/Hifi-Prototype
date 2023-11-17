@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
 import RecipeData from '../data';
+import TextOverImage from '../components/TextOverImage';
 
 
 
@@ -13,7 +14,7 @@ import RecipeData from '../data';
       <View style={styles.searchContainer}>
         <Pressable style={styles.searchContainer}
         onPress={()=> navigation.navigate("Searchbar")}> 
-         <Text> Search for Recipes...</Text>
+         <Text> 🔍 Search for Recipes...</Text>
         </Pressable>
       </View>
 
@@ -24,7 +25,12 @@ import RecipeData from '../data';
             onPress={()=> navigation.navigate("Recipe", {
               id: item.id
             })}>
-              <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} />
+              <TextOverImage 
+                source={{ uri: item.src }} // Replace with your image source
+                text={item.name}
+                width={180}
+                height={150}
+              />
             </Pressable>
           
         ))}
@@ -74,4 +80,14 @@ import RecipeData from '../data';
     iconText: {
       fontSize: 16,
     },
-    });
+    addPress: {
+      position: 'absolute',
+      zIndex: 1,
+      fontSize: 30,
+      top: -20,      // Adjust this value to move it below the status bar
+      right: 10,    // Distance from the right
+      padding: 10,  // Padding for better touch area
+      // Additional styling
+    }
+
+});
