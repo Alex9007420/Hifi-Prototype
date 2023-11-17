@@ -24,10 +24,7 @@ export default function Search ({navigation}) {
     <SafeAreaView style={styles.root}>
       {!clicked && <Text style={styles.title}>Programming Languages</Text>}
 
-      <Pressable style={styles.title}
-        onPress={()=> navigation.navigate("Home")}> 
-         <Text> pleaseeeeeeeeeeeeeeeeeeeeeeeeeeeee</Text>
-        </Pressable>
+      
       
 
       <SearchBar
