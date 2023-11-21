@@ -6,7 +6,8 @@ const {width, height} = Dimensions.get('window')
 
 const Item = ({ index, oncf }) => (
   <Pressable
-    style={styles.searchContainer}
+    // style={styles.searchContainer}
+    style={{flex: 1, width: width,}}
     onPress={() => oncf(index)}
   >
     <Ingredient index={index} />
@@ -37,6 +38,7 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
         keyExtractor={(item) => item.id.toString()} // Ensure key is a string
         horizontal
         pagingEnabled
+        showsHorizontalScrollIndicator={false}
         
       />
     </View>
@@ -48,10 +50,10 @@ const Ingredient = ({ index }) => {
 
   return (
     <View style={styles.container}>
-      <Text>{iData.name}</Text>
-      <Image style={styles.imageItem} source={{ uri: iData.src }} />
+      <Text style={styles.titel}>{iData.name}</Text>
+      <Image style={styles.imageItem} source={{ uri: iData.picture }} />
       {iData.ingredients.map((bla, index) => (
-        <Text key={index}>{bla}</Text>
+        <Text style={styles.ingredients} key={index}>{bla}</Text>
       ))}
     </View>
   );

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     imageItem: {
       height: 160,
       margin: 5,
-      width: '45%', // Approximately 2 columns, depending on container width
+      width: '97%', // Approximately 2 columns, depending on container width
       borderRadius: 10,
     },iconContainer: {
       alignItems: 'center',
@@ -69,6 +69,24 @@ const styles = StyleSheet.create({
       width: width, // important for flatlist
       paddingToppadding: 0,
       backgroundColor: '#080',
+  },
+  titel: {
+    fontSize: 24,
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: '#111',
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+  },
+  ingredients: {
+    backgroundColor: '#111',
+    fontSize: 16,
+    color: 'white',
+    textAlign: 'center',
+    userSelect: 'text',
+    padding: 2,
   },
     });
     export default styles;
