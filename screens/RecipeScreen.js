@@ -19,6 +19,9 @@ export default function Recipe({route, navigation}){
   const [cookingIng, setcookingIng] = useState([]);
   return (
     <ScrollView>
+
+      {/* TITLE CARD */}
+
       <RecipeTitleCard
         style={{  fontSize: 26 }}
         source={{ uri: Data.src }} // Replace with your image source
@@ -26,6 +29,13 @@ export default function Recipe({route, navigation}){
         //width={425} // TODO: is this default width guaranteed to be 100% ?
         height={250} // TODO: units/responsiveness??
       />
+
+      {/* PREPARATION TIME */}
+
+      <Text style={styles.preparationTimeText}>Active: {Data.time} min - Total: {Data.time} min</Text>
+
+      {/* EVERYTHING ELSE */}
+
       {
         Data.details.map((item) => <Text>Detail: {item}</Text>)
       }
@@ -51,10 +61,13 @@ export default function Recipe({route, navigation}){
 
 
 const styles = StyleSheet.create({
-  recipeHeader: {
-    fontSize: 24,
-    color: 'red',
-    fontWeight: 'bold'
+  preparationTimeText: {
+    fontSize: 15,
+    margin: 20,
+    textAlign: 'center',
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: 'black',
   },
   container: {
     flex: 1,
