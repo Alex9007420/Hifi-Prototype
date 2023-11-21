@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         height: '100%',
         resizeMode: 'cover', // This ensures the image covers the entire area
         borderWidth: 5, 
-        borderColor: 'white', // White color for the border
+        borderColor: 'white',
         borderRadius: 10, // Rounded corners
         overflow: 'hidden' // This ensures the image respects the border radius
     },

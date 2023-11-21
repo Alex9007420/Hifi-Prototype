@@ -14,8 +14,8 @@ import RecipeTitleCard from '../components/RecipeTitleCard';
 
 
 export default function Recipe({route, navigation}){
-  const Data = RecipeData.find((item) => item.id == route.params.id);
-  // const iData = IngredientsData.filter((item) => Data.ingredients.includes(item.id));
+  const recipe = RecipeData.find((item) => item.id == route.params.id);
+  const ingredients = IngredientsData.filter((item) => recipe.ingredients.includes(item.id));
   const [cookingIng, setcookingIng] = useState([]);
   return (
     <ScrollView>
@@ -24,24 +24,31 @@ export default function Recipe({route, navigation}){
 
       <RecipeTitleCard
         style={{  fontSize: 26 }}
-        source={{ uri: Data.src }} // Replace with your image source
-        text={Data.name}
+        source={{ uri: recipe.src }} // Replace with your image source
+        text={recipe.name}
         //width={425} // TODO: is this default width guaranteed to be 100% ?
         height={250} // TODO: units/responsiveness??
       />
 
       {/* PREPARATION TIME */}
 
-      <Text style={styles.preparationTimeText}>Active: {Data.time} min - Total: {Data.time} min</Text>
+      <Text style={styles.subheader}>Active: {recipe.time} min - Total: {recipe.time} min</Text>
+
+      {/* INGREDIENTS */}
+
+      <Text style={styles.header}>Ingredients</Text>
+      {
+        recipe.ingredients.map((item) => (<Text style={styles.subheader}>{item}</Text>))
+      }
 
       {/* EVERYTHING ELSE */}
 
       {
-        Data.details.map((item) => <Text>Detail: {item}</Text>)
+        recipe.details.map((item) => <Text>Detail: {item}</Text>)
       }
-      <Tools index={Data.id}/>
-      <Text>Estimated preparation time: {Data.time}</Text>
-      { Data.ingredients.map((item) => (
+      <Tools index={recipe.id}/>
+      <Text>Estimated preparation time: {recipe.time}</Text>
+      { recipe.ingredients.map((item) => (
         <View>
           <Text>{item}</Text>
           <Ingredients category={item} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
@@ -61,9 +68,15 @@ export default function Recipe({route, navigation}){
 
 
 const styles = StyleSheet.create({
-  preparationTimeText: {
+  header: {
+    fontSize: 26,
+    margin: 20,
+    textAlign: 'center',
+  },
+  subheader: {
     fontSize: 15,
     margin: 20,
+    padding: 10,
     textAlign: 'center',
     borderWidth: 2,
     borderRadius: 10,
