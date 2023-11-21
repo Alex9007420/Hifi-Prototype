@@ -38,7 +38,14 @@ export default function Recipe({route, navigation}){
 
       <Text style={styles.header}>Ingredients</Text>
       {
-        recipe.ingredients.map((item) => (<Text style={styles.subheader}>{item}</Text>))
+        recipe.ingredients.map((ingredientCategory) => 
+          <>
+            {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}
+            <Text style={styles.subheader}>{ingredientCategory}</Text>
+            {/* AVAILABLE INGREDIENTS PER CATEGORY (e. g. pizza dough, basic sauce, mozarella, ...) */}
+            {IngredientsData.filter((ing1) => ing1.category == ingredientCategory).map((ing2) => <Text>{ing2.name}</Text>)}
+          </>
+        )
       }
 
       {/* EVERYTHING ELSE */}
