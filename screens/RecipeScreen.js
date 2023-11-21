@@ -32,7 +32,8 @@ export default function Recipe({route, navigation}){
 
       {/* PREPARATION TIME */}
 
-      <Text style={styles.subheader}>Active: {recipe.time} min - Total: {recipe.time} min</Text>
+      <Text style={styles.subheader}><MaterialCommunityIcons name={'clock-outline'} size={15}/> Active: {recipe.time} min - Total: {recipe.time} min</Text>
+      {/* TODO: No separate fields available for active/total time at this time (see Figma board) */}
 
       {/* INGREDIENTS */}
 
@@ -50,14 +51,18 @@ export default function Recipe({route, navigation}){
 
       {/* UTENSILS */}
       <Text style={styles.header}>Utensils</Text>
+      <View style={{padding: 20}}>
+        <Tools index={recipe.id}/>
+      </View>
+      
 
-      {/* EVERYTHING ELSE */}
-
+      {/* optional/unclear section */}
       {/*
         TODO: what data goes in 'details' exactly, and shouldn't that field be removed?
         recipe.details.map((item) => <Text>Detail: {item}</Text>)
       */}
-      <Tools index={recipe.id}/>
+
+      {/* COOKING MODE BUTTON */}
       <Pressable style={styles.dashboard}
         onPress={()=> navigation.navigate("CookingMode", {
           ids: cookingIng
