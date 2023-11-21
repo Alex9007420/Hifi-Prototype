@@ -42,7 +42,7 @@ export default function Recipe({route, navigation}){
           <>
             {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}
             <Text style={styles.subheader}>{ingredientCategory}</Text>
-            {/* AVAILABLE INGREDIENTS PER CATEGORY (e. g. pizza dough, basic sauce, mozarella, ...) */}
+            {/* AVAILABLE INGREDIENTS PER CATEGORY (e. g. for dough: pizza dough, cookie dough, ...) */}
             <Ingredients category={ingredientCategory} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
           </>
         )
@@ -53,17 +53,11 @@ export default function Recipe({route, navigation}){
 
       {/* EVERYTHING ELSE */}
 
-      {
+      {/*
+        TODO: what data goes in 'details' exactly, and shouldn't that field be removed?
         recipe.details.map((item) => <Text>Detail: {item}</Text>)
-      }
+      */}
       <Tools index={recipe.id}/>
-      <Text>Estimated preparation time: {recipe.time}</Text>
-      { recipe.ingredients.map((item) => (
-        <View>
-          <Text>{item}</Text>
-          
-        </View>
-      ))}
       <Pressable style={styles.dashboard}
         onPress={()=> navigation.navigate("CookingMode", {
           ids: cookingIng
