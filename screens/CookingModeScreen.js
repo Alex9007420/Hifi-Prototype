@@ -31,17 +31,17 @@ export default function CookingMode ({route}){
             renderItem={({item}) => {
               //const steps = IngredientsData.find((item) => item.category == Data.ingredients[0]);
               return (
-                  <View style={styles.imageContainer}>
-                      <Image style={styles.image} source={{uri: item.picture}} />
-                      <ScrollView contentContainerStyle={styles.CookingMode}>
-                          <Text >
-                              {item.name}
-                          </Text>
-                          <View style={styles.searchContainer}>
-                            <Ingredient index={item.id}/>
-                          </View>
-                      </ScrollView>
-                  </View>
+                <View style={styles.CookingMode}>
+                  <Text style={styles.titel}>
+                      {item.name}
+                  </Text>
+                  <Image style={styles.image} source={{uri: item.picture}} />
+                  <ScrollView contentContainerStyle={styles.ingredientsContainer}>
+                      <View style={styles.searchContainer}>
+                        <Ingredient index={item.id}/>
+                      </View>
+                  </ScrollView>
+                </View>
               );
             }}
         />
@@ -51,11 +51,11 @@ const Ingredient = ({ index }) => {
   const iData = IngredientsData.find((item) => item.id === index);
 
   return (
-    <View style={styles.container}>
-      <Text>{iData.name}</Text>
-      <Image style={styles.imageItem} source={{ uri: iData.src }} />
+    <View>
+      {/* <Text>{iData.name}</Text>
+      <Image style={styles.imageItem} source={{ uri: iData.src }} /> */}
       {iData.ingredients.map((bla, index) => (
-        <Text key={index}>{bla}</Text>
+        <Text style={styles.ingredients}  key={index}>{bla}</Text>
       ))}
     </View>
   );
@@ -64,58 +64,41 @@ const Ingredient = ({ index }) => {
 
 // TODO: add correct styles; just copy pasted the styles for now
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop: 30,
-    },
-    searchContainer: {
-      padding: 10,
-      backgroundColor: '#fff',
-    },
-    searchInput: {
-      height: 40,
-      backgroundColor: '#f0f0f0',
-      borderRadius: 20,
-      paddingLeft: 10,
-    },
-    dashboard: {
-      // flexDirection: 'row',
-      // flexWrap: 'wrap',
-      // justifyContent: 'space-around',
-      padding: 5,
-    },
-    imageItem: {
-      height: 160,
-      margin: 5,
-      width: '45%', // Approximately 2 columns, depending on container width
-      borderRadius: 10,
-    },
-    footer: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      backgroundColor: '#fff',
-      borderTopWidth: 1,
-      borderTopColor: '#e1e1e1',
-      paddingVertical: 10,
-      paddingBottom: 20, // Padding to avoid overlap with home gesture
-    },
-    iconContainer: {
-      alignItems: 'center',
-    },
-    iconText: {
-      fontSize: 16,
-    },
-    CookingMode: {
-        width: width, // important for flatlist
-        paddingToppadding: 0,
-        backgroundColor: '#080',
-    },
-    imageContainer: {
-        flex: 1, // important for flatlist
-        width: width,
-    },
-    image: {
-        height: 120,
-        // width: '100%', 
-    },
-    });
+  CookingMode: {
+    flex: 1, // important for flatlist
+    width: width,
+    backgroundColor: '#000',
+  },
+  titel: {
+    fontSize: 24,
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: '#111',
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+  },
+  image: {
+    height: 120,
+    // width: '100%', 
+  },
+  ingredientsContainer: {
+    width: width, // important for flatlist
+    paddingToppadding: 0,
+    backgroundColor: '#111',
+    borderWidth: 1,
+    borderColor: '#fff',
+  },
+  searchContainer: {
+    padding: 10,
+  },
+  ingredients: {
+    backgroundColor: '#111',
+    fontSize: 16,
+    color: 'white',
+    textAlign: 'center',
+    userSelect: 'text',
+    padding: 2,
+  },
+  });
