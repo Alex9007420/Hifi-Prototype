@@ -43,10 +43,13 @@ export default function Recipe({route, navigation}){
             {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}
             <Text style={styles.subheader}>{ingredientCategory}</Text>
             {/* AVAILABLE INGREDIENTS PER CATEGORY (e. g. pizza dough, basic sauce, mozarella, ...) */}
-            {IngredientsData.filter((ing1) => ing1.category == ingredientCategory).map((ing2) => <Text>{ing2.name}</Text>)}
+            <Ingredients category={ingredientCategory} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
           </>
         )
       }
+
+      {/* UTENSILS */}
+      <Text style={styles.header}>Utensils</Text>
 
       {/* EVERYTHING ELSE */}
 
@@ -58,7 +61,7 @@ export default function Recipe({route, navigation}){
       { recipe.ingredients.map((item) => (
         <View>
           <Text>{item}</Text>
-          <Ingredients category={item} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
+          
         </View>
       ))}
       <Pressable style={styles.dashboard}
