@@ -10,6 +10,7 @@ import Tools from '../components/Tools';
 import RecipeData from '../data';
 import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
+import RecipeTitleCard from '../components/RecipeTitleCard';
 
 
 export default function Recipe({route, navigation}){
@@ -18,8 +19,13 @@ export default function Recipe({route, navigation}){
   const [cookingIng, setcookingIng] = useState([]);
   return (
     <ScrollView>
-      <Text style={styles.recipeHeader}>{Data.name}</Text>
-      <Image style={styles.imageItem} source={{ uri: Data.src}}/>
+      <RecipeTitleCard
+        style={{  fontSize: 26 }}
+        source={{ uri: Data.src }} // Replace with your image source
+        text={Data.name}
+        //width={425} // TODO: is this default width guaranteed to be 100% ?
+        height={250} // TODO: units/responsiveness??
+      />
       {
         Data.details.map((item) => <Text>Detail: {item}</Text>)
       }
