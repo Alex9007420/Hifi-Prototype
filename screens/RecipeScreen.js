@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
+import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Infoscreen from './InfoScreen';
 import CookScreen from './CookScreen';
@@ -11,6 +11,7 @@ import RecipeData from '../data';
 import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 import RecipeTitleCard from '../components/RecipeTitleCard';
+const {width, height} = Dimensions.get('window');
 
 // Convert minutes (string or int) to hours and minutes in a human-readable string
 function timeString(minutes) {
@@ -40,53 +41,53 @@ export default function Recipe({route, navigation}){
   const activeTime = recipe.time;
   const totalTime = Math.max(activeTime, activeTime * 2 - 15);
   return (
-    <ScrollView>
+    <>
+      <ScrollView>
 
-      {/* TITLE CARD */}
+        {/* TITLE CARD */}
 
-      <RecipeTitleCard
-        style={{  fontSize: 26 }}
-        source={{ uri: recipe.src }}
-        text={recipe.name}
-        //width={425} // TODO: is this default width guaranteed to be 100% ?
-        height={250} // TODO: units/responsiveness??
-      />
+        <RecipeTitleCard
+          style={{  fontSize: 26 }}
+          source={{ uri: recipe.src }}
+          text={recipe.name}
+          //width={425} // TODO: is this default width guaranteed to be 100% ?
+          height={250} // TODO: units/responsiveness??
+        />
 
-      {/* PREPARATION TIME */}
+        {/* PREPARATION TIME */}
 
-      <Text style={styles.subheader}><MaterialCommunityIcons name={'clock-outline'} size={15}/> Active: {timeString(activeTime)} - Total: {timeString(totalTime)}</Text>
-      {/* TODO: No separate fields available for active/total time at this time (see Figma board) */}
+        <Text style={styles.subheader}><MaterialCommunityIcons name={'clock-outline'} size={15}/> Active: {timeString(activeTime)} - Total: {timeString(totalTime)}</Text>
+        {/* TODO: No separate fields available for active/total time at this time (see Figma board) */}
 
-      {/* INGREDIENTS */}
+        {/* INGREDIENTS */}
 
-      <Text style={styles.header}>Ingredients</Text>
-      {
-        recipe.ingredients.map((ingredientCategory) => 
-          <>
-            {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}
-            <Text style={styles.subheader}>{ingredientCategory}</Text>
-            {/* AVAILABLE INGREDIENTS PER CATEGORY (e. g. for dough: pizza dough, cookie dough, ...) */}
-            <Ingredients category={ingredientCategory} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
-          </>
-        )
-      }
+        <Text style={styles.header}>Ingredients</Text>
+        {
+          recipe.ingredients.map((ingredientCategory) => 
+            <>
+              {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}
+              <Text style={styles.subheader}>{ingredientCategory}</Text>
+              {/* AVAILABLE INGREDIENTS PER CATEGORY (e. g. for dough: pizza dough, cookie dough, ...) */}
+              <Ingredients category={ingredientCategory} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
+            </>
+          )
+        }
 
-      {/* UTENSILS */}
-      <Text style={styles.header}>Utensils</Text>
-      <View style={{padding: 20}}>
-        <Tools index={recipe.id}/>
-      </View>
-
-      {/* COOKING MODE BUTTON */}
-      <Pressable style={styles.dashboard}
+        {/* UTENSILS */}
+        <Text style={styles.header}>Utensils</Text>
+        <View style={{padding: 20, marginBottom: 220}}>{/* Bit of scrollable space at the bottom */}
+          <Tools index={recipe.id}/>
+        </View>
+      </ScrollView>
+      
+      {/* COOKING MODE BUTTON (outside of ScrollView) */}
+      <Pressable style={styles.cookingModeButton}
         onPress={()=> navigation.navigate("CookingMode", {
           ids: cookingIng
-        })}>
-        <View style={styles.iconContainer}>
-         <Text style={styles.iconText}>Cooking Mode</Text>
-        </View>
+        })}>          
+          <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold', fontSize: 15 }}><MaterialCommunityIcons name={'clipboard-list'} size={15} /> Cooking Mode</Text>
       </Pressable>
-    </ScrollView>
+    </>
   )
 }
 
@@ -146,5 +147,17 @@ const styles = StyleSheet.create({
   },
   iconText: {
     fontSize: 16,
+  },
+  cookingModeButton: {
+    backgroundColor: 'red',
+    color: 'white',
+    width: width - 50,
+    borderWidth: 2,
+    borderRadius: 15,
+    borderStyle: 'solid',
+    borderColor: '#cc0000',
+    margin: 25,
+    marginTop: 5,
+    padding: 12,
   },
 });
