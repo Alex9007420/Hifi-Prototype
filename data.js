@@ -4,7 +4,7 @@ const RecipeData =[
     name: "Pizza Margherita",
     details: ["Flour dough ", "Basic marinara ", "Mozarella"],
     time: "30",
-    src: 'https://images.ctfassets.net/nw5k25xfqsik/64VwvKFqxMWQORE10Tn8pY/200c0538099dc4d1cf62fd07ce59c2af/20220211142754-margherita-9920.jpg?w=1024',
+    src: './assets/margherita.jpeg',
     tools: ["cog"],
     ingredients: ["Dough", "Sauce", "Toppings"],
   },
