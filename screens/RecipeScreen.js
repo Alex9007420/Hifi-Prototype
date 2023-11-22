@@ -76,13 +76,6 @@ export default function Recipe({route, navigation}){
       <View style={{padding: 20}}>
         <Tools index={recipe.id}/>
       </View>
-      
-
-      {/* optional/unclear section */}
-      {/*
-        TODO: what data goes in 'details' exactly, and shouldn't that field be removed?
-        recipe.details.map((item) => <Text>Detail: {item}</Text>)
-      */}
 
       {/* COOKING MODE BUTTON */}
       <Pressable style={styles.dashboard}
