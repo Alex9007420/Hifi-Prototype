@@ -9,14 +9,22 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   const iData = IngredientsData.filter((item) => item.category === category);
   const flatListRef = useRef(null);
   const [visibleIndex, setVisibleIndex] = useState(0);
-  if(iData.length ===1){
+
     const firstIngredientId = iData[0].id;
       // If the first ingredient is not in cookingIng, add it to the list
-      if (!cookingIng.includes(firstIngredientId)) {
+      const cookingIngIngredients = iData.filter((ingredient) => cookingIng.includes(ingredient.id));
+      const visibleIngredient = iData.find((ingredient) => ingredient.id === firstIngredientId);
+      const matchingCategoryIndex = cookingIngIngredients.findIndex(
+        (ingredient) => ingredient.category === visibleIngredient.category
+      );
+      console.log("matchingcategoryindex "+ matchingCategoryIndex)
+      console.log("the id is: "+ cookingIng[matchingCategoryIndex])
+
+      if (!cookingIng.includes(firstIngredientId) && (matchingCategoryIndex ===-1)) {
         setcookingIng((prevCookingIng) => [...prevCookingIng, firstIngredientId]);
       }
 
-  }
+  
   
   const handleScroll = (event) => {
     const xOffset = event.nativeEvent.contentOffset.x;
@@ -45,12 +53,10 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   
       // If the category is already in the cookingIng list, update its ID
       if (matchingCategoryIndex !== -1) {
-        console.log("This should be called! "+ visibleIngredientId+ " the other's id is: "+ updatedCookingIng[matchingCategoryIndex])
         // Swap IDs with the matching category
         const matchingCategoryId = otherIngredients[matchingCategoryIndex].id;
         updatedCookingIng[matchingCategoryIndex] = visibleIngredientId;
         //updatedCookingIng.push(matchingCategoryId);
-        console.log("here i would like to see something else "+ updatedCookingIng[matchingCategoryIndex]+ " the matching category id is: "+ matchingCategoryId)
         const chelp =  updatedCookingIng.filter((index) => index !== matchingCategoryId);
         console.log("chelpo "+ chelp)
         return chelp;
