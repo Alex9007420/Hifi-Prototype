@@ -12,11 +12,33 @@ import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 import RecipeTitleCard from '../components/RecipeTitleCard';
 
+// Convert minutes (string or int) to hours and minutes in a human-readable string
+function timeString(minutes) {
+  if (typeof minutes == "string")
+    minutes = parseInt(minutes, 10); // Decimal system
+  const hours = Math.floor(minutes / 60);
+  minutes -= 60 * hours;
+  var humanReadable = "";
+  if (hours > 0)
+    humanReadable += hours + "h";
+  if (hours > 0 && minutes > 0)
+    humanReadable += " ";
+  if (minutes > 0)
+    humanReadable += minutes + "min";
+  return humanReadable;
+}
+
 
 export default function Recipe({route, navigation}){
   const recipe = RecipeData.find((item) => item.id == route.params.id);
   const ingredients = IngredientsData.filter((item) => recipe.ingredients.includes(item.id));
   const [cookingIng, setcookingIng] = useState([]);
+
+  // Generate different active and total recipe preparation times,
+  // as data.js only has one time field, not two.
+  // The formula is completely arbitrary, adapt if needed.
+  const activeTime = recipe.time;
+  const totalTime = Math.max(activeTime, activeTime * 2 - 15);
   return (
     <ScrollView>
 
@@ -24,7 +46,7 @@ export default function Recipe({route, navigation}){
 
       <RecipeTitleCard
         style={{  fontSize: 26 }}
-        source={{ uri: recipe.src }} // Replace with your image source
+        source={{ uri: recipe.src }}
         text={recipe.name}
         //width={425} // TODO: is this default width guaranteed to be 100% ?
         height={250} // TODO: units/responsiveness??
@@ -32,7 +54,7 @@ export default function Recipe({route, navigation}){
 
       {/* PREPARATION TIME */}
 
-      <Text style={styles.subheader}><MaterialCommunityIcons name={'clock-outline'} size={15}/> Active: {recipe.time} min - Total: {recipe.time} min</Text>
+      <Text style={styles.subheader}><MaterialCommunityIcons name={'clock-outline'} size={15}/> Active: {timeString(activeTime)} - Total: {timeString(totalTime)}</Text>
       {/* TODO: No separate fields available for active/total time at this time (see Figma board) */}
 
       {/* INGREDIENTS */}
