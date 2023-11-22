@@ -37,9 +37,22 @@ export default function CookingMode ({route}){
                   </Text>
                   <Image style={styles.image} source={{uri: item.picture}} />
                   <ScrollView contentContainerStyle={styles.ingredientsContainer}>
-                      <View style={styles.searchContainer}>
-                        <Ingredient index={item.id}/>
-                      </View>
+                    <Text style={styles.ingredientsTitel}>
+                      Ingredients
+                    </Text>
+                    <View style={styles.searchContainer}>
+                      <Ingredient index={item.id}/>
+                    </View>
+                    <Text style={styles.ingredientsTitel}>
+                      How to make it:
+                    </Text>
+                      {
+                      item.cookingstep.map((step, index) =>
+                        <View key={index} style={styles.stepContainer}>
+                          <Text style={styles.stepNumber}>{index + 1}.</Text>
+                          <Text style={styles.stepText}>{step}</Text>
+                        </View>
+                      )}
                   </ScrollView>
                 </View>
               );
@@ -95,10 +108,33 @@ const styles = StyleSheet.create({
   },
   ingredients: {
     backgroundColor: '#111',
+    fontSize: 12,
+    color: 'white',
+    //textAlign: 'center',
+    userSelect: 'text',
+    padding: 2,
+  },
+  ingredientsTitel: {
+    backgroundColor: '#111',
     fontSize: 16,
     color: 'white',
     textAlign: 'center',
     userSelect: 'text',
-    padding: 2,
+    padding: 10,
+  },
+  stepContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: 5,
+  },
+  stepNumber: {
+    color: 'white',
+    fontWeight: 'bold',
+    marginRight: 5,
+    marginLeft: 10,
+  },
+  stepText: {
+    color: 'white',
+    flex: 1,
   },
   });
