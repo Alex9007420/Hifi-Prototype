@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions } from 'react-native';
+import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions, ListView } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Infoscreen from './InfoScreen';
 import CookScreen from './CookScreen';
@@ -11,6 +11,7 @@ import RecipeData from '../data';
 import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 import RecipeTitleCard from '../components/RecipeTitleCard';
+import { FlatList } from 'react-native-gesture-handler';
 const {width, height} = Dimensions.get('window');
 
 // Convert minutes (string or int) to hours and minutes in a human-readable string
@@ -78,6 +79,28 @@ export default function Recipe({route, navigation}){
         <View style={{padding: 20, marginBottom: 220}}>{/* Bit of scrollable space at the bottom */}
           <Tools index={recipe.id}/>
         </View>
+
+        {/* Cooking Steps
+        <Text style={styles.header}>Cooking Steps</Text>
+        <View style={{padding: 20, marginBottom: 220}}>
+        {selectedIngredients = IngredientsData.filter((item) => cookingIng.includes(item.id))}
+        <ListView 
+        data={selectedIngredients} 
+        renderItem={({item}) => {
+          return(
+            <View>
+            <Text style={styles.subheader}>{item.category}</Text>
+            {item.cookingstep.map((step, index) =>
+              <View key={index} style={styles.stepContainer}>
+                <Text style={styles.stepNumber}>{index + 1}.</Text>
+                <Text style={styles.stepText}>{step}</Text>
+              </View>
+            )}
+            </View>
+            )}}
+        />
+        </View> */}
+
       </ScrollView>
       
       {/* COOKING MODE BUTTON (outside of ScrollView) */}
