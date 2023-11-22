@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
       borderRadius: 20,
       paddingLeft: 10,
     },
+    flatList: {
+      width: width,
+    },    
     dashboard: {
       flexDirection: 'row',
       flexWrap: 'wrap',
