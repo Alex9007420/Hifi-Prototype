@@ -102,15 +102,15 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   //   }
   // }, [iData, cookingIng, setcookingIng]);
 
+  {/* PILL-SHAPED INDICATORS: logic */}
   var pills = [];
   for (var i = 0; i < iData.length; ++i) {
     pills.push(<View style={{
       width: i == visibleIndex ? 18 : 6,
       height: 6,
       borderRadius: 3,
-      backgroundColor: i == visibleIndex ? '#000' : '#aaa',
-      // backgroundColor: i == visibleIndex ? 'rgb(0,139,255)' : 'rgb(0,139,255)',
-      margin: i == visibleIndex ? 4 : 4,
+      backgroundColor: i == visibleIndex ? '#454545' : '#aaa',
+      margin: 4,
       marginTop: 0,
       marginBottom: 0,
     }}></View>);
@@ -130,6 +130,7 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
         onScroll={handleScroll}
         onMomentumScrollEnd={handleMomentumScrollEnd}
       />
+      {/* PILL-SHAPED INDICATORS: elements */}
       <View style={{
         marginTop: -10, // TODO: using negative margins is cheating...
         marginBottom: 15,
