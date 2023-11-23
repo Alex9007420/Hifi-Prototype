@@ -25,15 +25,15 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         resizeMode: 'cover', // This ensures the image covers the entire area
-        borderWidth: 5, 
+        borderWidth: 0, 
         borderColor: 'white',
-        borderRadius: 10, // Rounded corners
+        borderRadius: 0, // Rounded corners
         overflow: 'hidden' // This ensures the image respects the border radius
     },
     text: {
       position: 'absolute',
-      bottom: 10, // Position text at the bottom of the image
-      left: 10, // Position text from the left of the image
+      bottom: 20, // Position text at the bottom of the image
+      left: 20, // Position text from the left of the image
       color: 'white', // Ensure the text color is visible on the image
       fontSize: 40,
       fontWeight: 'bold',
