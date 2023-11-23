@@ -4,7 +4,7 @@ const RecipeData =[
     name: "Pizza Margherita",
     details: ["Flour dough ", "Basic marinara ", "Mozarella"],
     time: "30",
-    src: './assets/margherita.jpeg',
+    src: 'https://images.prismic.io/eataly-us/ed3fcec7-7994-426d-a5e4-a24be5a95afd_pizza-recipe-main.jpg?auto=compress,format',
     tools: ["blender", "beaker", "stove", "trash-can", "microwave", "kettle", "grill", "pot-mix", "pot-steam", "chef-hat"],
     ingredients: ["Dough", "Sauce", "Toppings"],
   },
