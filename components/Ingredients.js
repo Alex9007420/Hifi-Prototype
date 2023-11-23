@@ -120,6 +120,17 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   );
 };
 
+upperCaseWords = (string) => {
+  var r = "";
+  for (var i = 0; i < string.length; ++i) {
+    if (i == 0 || string[i-1] == " ")
+      r += string[i].toUpperCase();
+    else
+      r += string[i];
+  }    
+  return r;
+}
+
 ingredientQuantity = (ingredientString) => {
   const separator = ingredientString.search(" ");
   return separator > 0
@@ -130,8 +141,8 @@ ingredientQuantity = (ingredientString) => {
 ingredientDescription = (ingredientString) => {
   const separator = ingredientString.search(" ");
   return separator > 0
-    ? ingredientString.substring(separator)
-    : ingredientString;
+    ? upperCaseWords(ingredientString.substring(separator))
+    : upperCaseWords(ingredientString);
 }
 
 const Ingredient = ({ index }) => {
