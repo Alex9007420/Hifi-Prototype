@@ -5,7 +5,7 @@ const RecipeData =[
     details: ["Flour dough ", "Basic marinara ", "Mozarella"],
     time: "30",
     src: './assets/margherita.jpeg',
-    tools: ["cog"],
+    tools: ["blender", "beaker", "stove", "trash-can", "microwave", "kettle", "grill", "pot-mix", "pot-steam", "chef-hat"],
     ingredients: ["Dough", "Sauce", "Toppings"],
   },
   {
@@ -14,7 +14,7 @@ const RecipeData =[
     details: ["BackEnd", "Data Science"],
     time: "300",
     src: 'https://www.seriouseats.com/thmb/sGmCdh11W1YtdHhHjosa2alkPJM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__05__Anova-Steak-Guide-Sous-Vide-Photos15-beauty-159b7038c56a4e7685b57f478ca3e4c8.jpg',
-    tools: ["cog"],
+    tools: ["grill", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -23,7 +23,7 @@ const RecipeData =[
     details: ["App Dev", "E-Commerce"],
     time: "50",
     src: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-master768-v2.jpg?w=1280&q=75',
-    tools: ["cog"],
+    tools: ["chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -32,7 +32,7 @@ const RecipeData =[
     details: ["Databases"],
     time: "60",
     src: 'https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&webp=true&resize=375,341',
-    tools: ["cog"],
+    tools: ["beaker", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -41,7 +41,7 @@ const RecipeData =[
     details: ["Databases"],
     time: "550",
     src: 'https://recipecontent.fooby.ch/22016_1-1_334-334@2x.jpg',
-    tools: ["cog"],
+    tools: ["kettle", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -50,7 +50,7 @@ const RecipeData =[
     details: ["Game Dev", "Desktop Apps", "Mobile Apps"],
     time: "10",
     src: 'https://www.sunset.com/wp-content/uploads/4_3_horizontal_inbody_900x506/nancy-silverton-salmon-steaks-sun-61837-0420.jpg',
-    tools: ["cog"],
+    tools: ["pot-steam", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -59,7 +59,7 @@ const RecipeData =[
     details: ["Operating Systems", "VR", "Web Browsers"],
     time: "520",
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Xiaolongbao-breakfast.jpg/800px-Xiaolongbao-breakfast.jpg',
-    tools: ["cog"],
+    tools: ["pot-steam", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -68,7 +68,7 @@ const RecipeData =[
     details: ["System Administration", "GUI Development"],
     time: "230",
     src: 'https://therecipecritic.com/wp-content/uploads/2019/08/easy_fried_rice-4.png',
-    tools: ["cog"],
+    tools: ["pot-mix", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -77,7 +77,7 @@ const RecipeData =[
     details: ["System Programming", "Audio Editing", "Big Data"],
     time: "380",
     src: 'https://www.en-vols.com/wp-content/uploads/afmm/2022/10/thumbnail_PATES-A-LA-TRUFFE-e1665745916891.png',
-    tools: ["cog"],
+    tools: ["blender", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -86,7 +86,7 @@ const RecipeData =[
     details: ["System Programming", "Audio Editing", "Big Data"],
     time: "380",
     src: 'https://www.feinschmecker.de/uploads/media/jalag-content-image/03/8413-ka%CC%88sespa%CC%88tzle.gif?v=1-0',
-    tools: ["cog"],
+    tools: ["pot-mix", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
@@ -95,7 +95,7 @@ const RecipeData =[
     details: ["Flour dough ", "Tomato sauce", "Mozarella"],
     time: "30",
     src: './assets/funghi.jpeg',
-    tools: ["cog"],
+    tools: ["stove", "chef-hat"],
     ingredients: ["Dough", "Sauce", "Toppings"],
   },
   {
@@ -104,7 +104,7 @@ const RecipeData =[
     details: ["Pasta", "Bolognese sauce", "Parmesan"],
     time: "10",
     src: './assets/Bolognese.jpeg',
-    tools: ["cog"],
+    tools: ["pot-steam", "chef-hat"],
     ingredients: ["Pasta", "Sauce", "Cheese"],
   },
   {
@@ -113,7 +113,7 @@ const RecipeData =[
     details: [""],
     time: "20",
     src: './assets/Burger.jpeg',
-    tools: ["cog"],
+    tools: ["grill", "chef-hat"],
     ingredients: ["Burger bums", "Vegetables", "Sauce", "Greens"],
   },
   {
@@ -122,7 +122,7 @@ const RecipeData =[
     details: [""],
     time: "20",
     src: './assets/rosti.jpeg',
-    tools: ["cog"],
+    tools: ["stove", "chef-hat"],
     ingredients: ["Vegetables", "Misc"],
   },
   {
@@ -131,7 +131,7 @@ const RecipeData =[
     details: [""],
     time: "60",
     src: './assets/General-Tso-Chicken.jpeg',
-    tools: ["cog"],
+    tools: ["pot-steam", "chef-hat"],
     ingredients: ["Meat", "Misc", "Sauce", "Spices", "Rice"],
   },
   {
@@ -140,7 +140,7 @@ const RecipeData =[
     details: [""],
     time: "60",
     src: './assets/fish_n_chips.jpeg',
-    tools: ["cog"],
+    tools: ["trashcan", "chef-hat"],
     ingredients: ["Dough", "Alcohhol", "Fish", "Vegetables"],
   },
   {
@@ -149,7 +149,7 @@ const RecipeData =[
     details: [""],
     time: "90",
     src: './assets/peking pork.jpeg',
-    tools: ["cog"],
+    tools: ["pot-steam", "chef-hat"],
     ingredients: ["Meat", "Vegetables", "Spices", "Dough", "Sauce", "Alcohol"],
   },
   {
@@ -158,7 +158,7 @@ const RecipeData =[
     details: [""],
     time: "90",
     src: './assets/goulash.jpeg',
-    tools: ["cog"],
+    tools: ["pot-steam", "chef-hat"],
     ingredients: ["Meat", "Vegetables", "Sauce", "Spices"],
   },
   {
@@ -167,7 +167,7 @@ const RecipeData =[
     details: [""],
     time: "10",
     src: './assets/Crouton.jpeg',
-    tools: ["cog"],
+    tools: ["blender", "chef-hat"],
     ingredients: ["Spices", "Dough", "Misc"],
   },
   {
@@ -176,7 +176,7 @@ const RecipeData =[
     details: [""],
     time: "15",
     src: './assets/Salmon roll.jpeg',
-    tools: ["cog"],
+    tools: ["stove", "chef-hat"],
     ingredients: ["Fish", "Cheese", "Misc", "Greens"],
   },
   {
@@ -185,7 +185,7 @@ const RecipeData =[
     details: [""],
     time: "80",
     src: './assets/Paella.jpeg',
-    tools: ["cog"],
+    tools: ["pot-mix", "chef-hat"],
     ingredients: ["Meat", "Vegetables", "Spices"],
   },
   {
@@ -194,7 +194,7 @@ const RecipeData =[
     details: [""],
     time: "90",
     src: './assets/Meatballs soup.jpeg',
-    tools: ["cog"],
+    tools: ["pot-steam", "chef-hat"],
     ingredients: ["Meat", "Vegetables", "Pasta"],
   },
 ];
