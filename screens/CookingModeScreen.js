@@ -13,17 +13,26 @@ import IngredientsData from '../IngredientsData';
 const {width, height} = Dimensions.get('window')
 
 export default function CookingMode ({route}){
-    const ids = route.params.ids;
-    //console.log(ids);
-   
-    const Data = IngredientsData.filter((item) => route.params.ids.includes(item.id));
-    //console.log(Data.length)
-    
+  const ids = route.params.ids;
+  
+  
+  console.log(ids);
+  
+  
+  // Filter IngredientsData based on the provided ids
+  const Data = IngredientsData.filter((item) => ids.includes(item.id));
+  
+  // Order the Data list based on the order of ids
+  const orderedData = ids.map((id) => Data.find((item) => item.id === id));
+  
+  
+  console.log(orderedData.length);
+  
     return (
         <FlatList
             horizontal //={true}
             pagingEnabled //={true}
-            data={Data}
+            data={orderedData}
             contentContainerStyle={{alignItems: "stretch"}}
             style={styles.CookingMode}
             keyExtractor={IngredientsData => IngredientsData.id}
