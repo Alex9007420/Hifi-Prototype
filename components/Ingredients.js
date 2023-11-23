@@ -120,18 +120,68 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   );
 };
 
+ingredientQuantity = (ingredientString) => {
+  const separator = ingredientString.search(" ");
+  return separator > 0
+    ? ingredientString.substring(0, separator)
+    : '';
+}
+
+ingredientDescription = (ingredientString) => {
+  const separator = ingredientString.search(" ");
+  return separator > 0
+    ? ingredientString.substring(separator)
+    : ingredientString;
+}
+
 const Ingredient = ({ index }) => {
   const iData = IngredientsData.find((item) => item.id === index);
 
   return (
     <View style={{ flex: 1, width: width }}>
-      <Text style={styles.titel}>{iData.name}</Text>
-      <Image style={styles.imageItem} source={{ uri: iData.picture }} />
-      {iData.ingredients.map((bla, index) => (
-        <Text style={styles.ingredients} key={index}>
-          {bla}
-        </Text>
-      ))}
+      {/* Nested view for styling. This ensures that the outer view remains unchanged,
+          so that styling does not interfere with the scrolling/selection mechanism. */}
+      <View style={{
+          margin: 20,
+          borderWidth: 2,
+          borderRadius: 15,
+          borderColor: '#99c',
+          flex: 2,
+          flexDirection: 'column',
+        }}>
+        <View style={{
+          padding: 10,
+          backgroundColor: '#99c',
+          borderTopLeftRadius: 13,
+          borderTopRightRadius: 13,
+        }}><Text style={{fontSize: 15, fontWeight: 'bold', color: '#fff'}}>{iData.name}</Text></View>
+        <Image style={{
+            width: '100%',
+            height: 200,
+          }}
+          source={{ uri: iData.picture }}
+        />
+        <View style={{
+          flex: 1,
+          flexDirection: 'row',
+          justifyContent: 'center',
+        }}>
+          <View style={{padding: 10}}>
+          {
+            iData.ingredients.map((ingredient, index) => (
+              <Text key={index} style={{ textAlign: 'right'}}>{ingredientQuantity(ingredient)}</Text>
+            ))
+          }
+          </View>
+          <View style={{padding: 10}}>
+          {
+            iData.ingredients.map((ingredient, index) => (
+              <Text>{ingredientDescription(ingredient)}</Text>
+            ))
+          }
+          </View>
+        </View>
+      </View>
     </View>
   );
 };
