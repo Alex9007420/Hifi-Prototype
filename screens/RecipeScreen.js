@@ -76,8 +76,10 @@ export default function Recipe({route, navigation}){
 
         {/* UTENSILS */}
         <Text style={styles.header}>Utensils</Text>
-        <View style={{padding: 20, marginBottom: 220}}>{/* Bit of scrollable space at the bottom */}
-          <Tools index={recipe.id}/>
+        <View style={{padding: 20, marginBottom: 220, flex: 1, flexDirection: 'row', flexWrap: 'wrap',  justifyContent: 'flex-start'}}>{/* Bit of scrollable space at the bottom */}
+        {
+          recipe.tools.map((tool) => <MaterialCommunityIcons name={tool} size={50} style={{padding: 10}} />)
+        }
         </View>
 
         {/* Cooking Steps
