@@ -178,7 +178,7 @@ const Ingredient = ({ index }) => {
           marginLeft: 1,
           marginBottom: 5,
           fontSize: 15,
-          fontWeight: 'bold',}}>{iData.name}</Text>
+          fontWeight: 'bold',}}>{upperCaseWords(iData.name)}</Text>
         </View>
         <View style={{
           flex: 1,
