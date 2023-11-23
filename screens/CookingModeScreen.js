@@ -16,7 +16,7 @@ export default function CookingMode ({route}){
   const ids = route.params.ids;
   
   
-  console.log(ids);
+  //console.log(ids);
   
   
   // Filter IngredientsData based on the provided ids
@@ -26,7 +26,7 @@ export default function CookingMode ({route}){
   const orderedData = ids.map((id) => Data.find((item) => item.id === id));
   
   
-  console.log(orderedData.length);
+  //console.log(orderedData.length);
   
     return (
         <FlatList
