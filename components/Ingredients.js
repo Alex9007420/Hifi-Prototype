@@ -10,20 +10,23 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   const flatListRef = useRef(null);
   const [visibleIndex, setVisibleIndex] = useState(0);
 
-    const firstIngredientId = iData[0].id;
+  useEffect(() => {
+    const firstIngredientId = iData[0]?.id;
+    
+    if (firstIngredientId) {
       // If the first ingredient is not in cookingIng, add it to the list
       const cookingIngIngredients = iData.filter((ingredient) => cookingIng.includes(ingredient.id));
       const visibleIngredient = iData.find((ingredient) => ingredient.id === firstIngredientId);
       const matchingCategoryIndex = cookingIngIngredients.findIndex(
         (ingredient) => ingredient.category === visibleIngredient.category
       );
-      console.log("matchingcategoryindex "+ matchingCategoryIndex)
-      console.log("the id is: "+ cookingIng[matchingCategoryIndex])
-
-      if (!cookingIng.includes(firstIngredientId) && (matchingCategoryIndex ===-1)) {
+  
+      if (!cookingIng.includes(firstIngredientId) && matchingCategoryIndex === -1) {
         setcookingIng((prevCookingIng) => [...prevCookingIng, firstIngredientId]);
       }
-
+    }
+  }, []); // Empty dependency array for componentDidMount behavior
+  
   
   
   const handleScroll = (event) => {
@@ -36,6 +39,7 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
     const visibleIngredientId = iData[visibleIndex]?.id;
     const visibleIngredient = iData.find((ingredient) => ingredient.id === visibleIngredientId);
   
+    
     setcookingIng((prevCookingIng) => {
       const updatedCookingIng = [...prevCookingIng];
   
@@ -43,31 +47,40 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
       const categoryIndex = updatedCookingIng.findIndex((id) =>
         iData.some((ingredient) => ingredient.id === id)
       );
+      //console.log("_________________"+ category+ "____________________________")
   
-      const otherIngredients = iData.filter((ingredient) => prevCookingIng.includes(ingredient.id));
+      const otherIngredients = IngredientsData.filter((ingredient) => prevCookingIng.includes(ingredient.id));
+      // console.log("the length of otherIngredients is: "+ otherIngredients.length)
+      // console.log("prevCookingIng has: "+ prevCookingIng)
+      // otherIngredients.map((ingredient)=> console.log("the ingredient in otherIngredients is: "+ ingredient.id))
+      
       
       // Check if the visibleIngredient has the same category as any other category in cookingIng
       const matchingCategoryIndex = otherIngredients.findIndex(
         (ingredient) => ingredient.category === visibleIngredient.category
       );
-  
-      // If the category is already in the cookingIng list, update its ID
+      
+      if(!updatedCookingIng.includes(visibleIngredientId)){
+         // If the category is already in the cookingIng list, update its ID
       if (matchingCategoryIndex !== -1) {
         // Swap IDs with the matching category
+        
         const matchingCategoryId = otherIngredients[matchingCategoryIndex].id;
-        updatedCookingIng[matchingCategoryIndex] = visibleIngredientId;
+        const updatedmatchingCategoryIndex = updatedCookingIng.findIndex((id) => id === otherIngredients[matchingCategoryIndex].id)
+        updatedCookingIng[updatedmatchingCategoryIndex] = visibleIngredientId;
         //updatedCookingIng.push(matchingCategoryId);
-        const chelp =  updatedCookingIng.filter((index) => index !== matchingCategoryId);
-        console.log("chelpo "+ chelp)
-        return chelp;
+        // console.log("the matching category index is: "+ matchingCategoryIndex)
+        // console.log("The visible Ingredient id is: "+ visibleIngredientId)
+        // console.log("matchingCategoryId is: "+ matchingCategoryId)
+        // console.log("I hope that this helped the problem..."+ updatedCookingIng)
+        
+        
       }else if (categoryIndex !== -1) {
         updatedCookingIng[categoryIndex] = visibleIngredientId;
-      } else {
-        console.log("please don't be you!")
-        // If the category is not in the cookingIng list, add the ID
-        updatedCookingIng.push(visibleIngredientId);
       }
   
+      }
+     
       return updatedCookingIng;
     });
   };
