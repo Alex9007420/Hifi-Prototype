@@ -143,24 +143,32 @@ const Ingredient = ({ index }) => {
           so that styling does not interfere with the scrolling/selection mechanism. */}
       <View style={{
           margin: 20,
-          borderWidth: 2,
+          padding: 10,
+          borderWidth: 1,
           borderRadius: 15,
-          borderColor: '#99c',
+          borderColor: '#bdf',
+          backgroundColor: '#fff',
+          shadowRadius: 5,
           flex: 2,
           flexDirection: 'column',
         }}>
-        <View style={{
-          padding: 10,
-          backgroundColor: '#99c',
-          borderTopLeftRadius: 13,
-          borderTopRightRadius: 13,
-        }}><Text style={{fontSize: 15, fontWeight: 'bold', color: '#fff'}}>{iData.name}</Text></View>
         <Image style={{
             width: '100%',
             height: 200,
+            borderWidth: 1,
+            borderRadius: 12,
+            borderColor: '#eef',
           }}
           source={{ uri: iData.picture }}
         />
+        <View style={{
+        }}><Text style={{
+          marginTop: 15,
+          marginLeft: 1,
+          marginBottom: 5,
+          fontSize: 15,
+          fontWeight: 'bold',}}>{iData.name}</Text>
+        </View>
         <View style={{
           flex: 1,
           flexDirection: 'row',
