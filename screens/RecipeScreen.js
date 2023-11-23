@@ -58,7 +58,6 @@ export default function Recipe({route, navigation}){
         {/* PREPARATION TIME */}
 
         <Text style={styles.subheader}><MaterialCommunityIcons name={'clock-outline'} size={15}/> Active: {timeString(activeTime)} - Total: {timeString(totalTime)}</Text>
-        {/* TODO: No separate fields available for active/total time at this time (see Figma board) */}
 
         {/* INGREDIENTS */}
 
@@ -76,7 +75,14 @@ export default function Recipe({route, navigation}){
 
         {/* UTENSILS */}
         <Text style={styles.header}>Utensils</Text>
-        <View style={{padding: 20, marginBottom: 220, flex: 1, flexDirection: 'row', flexWrap: 'wrap',  justifyContent: 'flex-start'}}>{/* Bit of scrollable space at the bottom */}
+        <View style={{
+          padding: 20,
+          marginBottom: 220, // Bit of scrollable space at the bottom
+          flex: 1,
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'flex-start'
+          }}>
         {
           recipe.tools.map((tool) => <MaterialCommunityIcons name={tool} size={50} style={{padding: 10}} />)
         }
