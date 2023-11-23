@@ -14,10 +14,10 @@ const {width, height} = Dimensions.get('window')
 
 export default function CookingMode ({route}){
     const ids = route.params.ids;
-    console.log(ids);
+    //console.log(ids);
    
     const Data = IngredientsData.filter((item) => route.params.ids.includes(item.id));
-    console.log(Data.length)
+    //console.log(Data.length)
     
     return (
         <FlatList
