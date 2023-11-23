@@ -102,6 +102,20 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   //   }
   // }, [iData, cookingIng, setcookingIng]);
 
+  var pills = [];
+  for (var i = 0; i < iData.length; ++i) {
+    pills.push(<View style={{
+      width: i == visibleIndex ? 18 : 6,
+      height: 6,
+      borderRadius: 3,
+      backgroundColor: i == visibleIndex ? '#000' : '#aaa',
+      // backgroundColor: i == visibleIndex ? 'rgb(0,139,255)' : 'rgb(0,139,255)',
+      margin: i == visibleIndex ? 4 : 4,
+      marginTop: 0,
+      marginBottom: 0,
+    }}></View>);
+  };
+
   return (
     <View style={styles.imageContainer}>
       <FlatList
@@ -116,6 +130,16 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
         onScroll={handleScroll}
         onMomentumScrollEnd={handleMomentumScrollEnd}
       />
+      <View style={{
+        marginTop: -10, // TODO: using negative margins is cheating...
+        marginBottom: 15,
+        width: '100%',
+        flex: 2,
+        flexDirection: 'row',
+        justifyContent: 'center',
+      }}>
+        { pills }
+      </View>
     </View>
   );
 };
