@@ -52,9 +52,7 @@ export default function CookingMode ({route}){
                     <View style={styles.searchContainer}>
                       <Ingredient index={item.id}/>
                     </View>
-                    <Text style={styles.ingredientsTitel}>
-                      How to make it:
-                    </Text>
+                    <Text style={styles.ingredientsTitel}>Step-by-step instructions</Text>
                       {
                       item.cookingstep.map((step, index) =>
                         <View key={index} style={styles.stepContainer}>
