@@ -50,10 +50,11 @@ export default function Recipe({route, navigation}){
     const newCookingSteps = currentselectedIngredients.map((ingredient)=> ingredient.cookingstep)
     // console.log("how long are you: "+ newCookingSteps.length)
     // console.log(" let's see if this works. newCookingSteps is: "+ newCookingSteps.toString())
+    const temp = cookingIng.map((id) => currentselectedIngredients.find((item)=> item.id === id));
 
     // Update cookingSteps state
     setCookingSteps(newCookingSteps);
-    setSelectedIngredients(currentselectedIngredients)
+    setSelectedIngredients(temp)
   }, [cookingIng]);
 
 
