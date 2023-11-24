@@ -13,6 +13,7 @@ import IngredientsData from '../IngredientsData';
 import RecipeTitleCard from '../components/RecipeTitleCard';
 import { FlatList } from 'react-native-gesture-handler';
 import { Constants } from 'react-native-navigation';
+import styles from '../components/Styles';
 const {width, height} = Dimensions.get('window');
 
 // Convert minutes (string or int) to hours and minutes in a human-readable string
@@ -134,74 +135,3 @@ export default function Recipe({route, navigation}){
     </>
   )
 }
-
-
-const styles = StyleSheet.create({
-  header: {
-    fontSize: 26,
-    margin: 20,
-    textAlign: 'center',
-  },
-  subheader: {
-    fontSize: 15,
-    margin: 20,
-    padding: 10,
-    textAlign: 'center',
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: 'black',
-  },
-  container: {
-    flex: 1,
-    marginTop: 30,
-  },
-  searchContainer: {
-    padding: 10,
-    backgroundColor: '#fff',
-  },
-  searchInput: {
-    height: 40,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 20,
-    paddingLeft: 10,
-  },
-  dashboard: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    padding: 5,
-  },
-  imageItem: {
-    height: 160,
-    margin: 5,
-    width: '45%', // Approximately 2 columns, depending on container width
-    borderRadius: 10,
-  },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: '#fff',
-    borderTopWidth: 1,
-    borderTopColor: '#e1e1e1',
-    paddingVertical: 10,
-    paddingBottom: 20, // Padding to avoid overlap with home gesture
-  },
-  iconContainer: {
-    alignItems: 'center',
-  },
-  iconText: {
-    fontSize: 16,
-  },
-  cookingModeButton: {
-    backgroundColor: 'red',
-    color: 'white',
-    width: width - 50,
-    borderWidth: 1,
-    borderRadius: 15,
-    borderStyle: 'solid',
-    borderColor: '#cc0000',
-    margin: 25,
-    marginTop: 5,
-    padding: 12,
-  },
-});

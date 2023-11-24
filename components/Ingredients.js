@@ -177,47 +177,22 @@ const Ingredient = ({ index }) => {
     <View style={{ flex: 1, width: width }}>
       {/* Nested view for styling. This ensures that the outer view remains unchanged,
           so that styling does not interfere with the scrolling/selection mechanism. */}
-      <View style={{
-          margin: 20,
-          padding: 10,
-          borderWidth: 1,
-          borderRadius: 15,
-          borderColor: '#bdf',
-          backgroundColor: '#fff',
-          shadowRadius: 5,
-          flex: 2,
-          flexDirection: 'column',
-        }}>
-        <Image style={{
-            width: '100%',
-            height: 200,
-            borderWidth: 1,
-            borderRadius: 12,
-            borderColor: '#eef',
-          }}
+      <View style={styles.ingredientImageContainer}>
+        <Image style={styles.ingredientImage}
           source={{ uri: iData.picture }}
         />
         <View style={{
-        }}><Text style={{
-          marginTop: 15,
-          marginLeft: 1,
-          marginBottom: 5,
-          fontSize: 15,
-          fontWeight: 'bold',}}>{upperCaseWords(iData.name)}</Text>
+        }}><Text style={styles.ingredientHeading}>{upperCaseWords(iData.name)}</Text>
         </View>
-        <View style={{
-          flex: 1,
-          flexDirection: 'row',
-          justifyContent: 'center',
-        }}>
-          <View style={{padding: 10}}>
+        <View style={styles.ingredientTextContainer}>
+          <View style={styles.ingredientPadding}>
           {
             iData.ingredients.map((ingredient, index) => (
-              <Text key={index} style={{ textAlign: 'right'}}>{ingredientQuantity(ingredient)}</Text>
+              <Text key={index} style={styles.ingredientText}>{ingredientQuantity(ingredient)}</Text>
             ))
           }
           </View>
-          <View style={{padding: 10}}>
+          <View style={styles.ingredientPadding}>
           {
             iData.ingredients.map((ingredient, index) => (
               <Text>{ingredientDescription(ingredient)}</Text>

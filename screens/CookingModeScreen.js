@@ -9,6 +9,7 @@ import Tools from '../components/Tools';
 import RecipeData from '../data';
 import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
+import styles from '../components/Styles';
 // TODO: only import what is actually needed
 const {width, height} = Dimensions.get('window')
 
@@ -41,18 +42,18 @@ export default function CookingMode ({route}){
               //const steps = IngredientsData.find((item) => item.category == Data.ingredients[0]);
               return (
                 <View style={styles.CookingMode}>
-                  <Text style={styles.titel}>
+                  <Text style={styles.subheader}>
                       {item.name}
                   </Text>
-                  <Image style={styles.image} source={{uri: item.picture}} />
                   <ScrollView contentContainerStyle={styles.ingredientsContainer}>
-                    <Text style={styles.ingredientsTitel}>
+                    <View style={styles.ingredientImageContainer}>
+                      <Image style={styles.ingredientImage} source={{uri: item.picture}} />
+                  
+                    <Text style={styles.ingredientHeading}>
                       Ingredients
                     </Text>
-                    <View style={styles.searchContainer}>
-                      <Ingredient index={item.id}/>
-                    </View>
-                    <Text style={styles.ingredientsTitel}>Step-by-step instructions</Text>
+                    <Ingredient index={item.id}/>
+                    <Text style={styles.ingredientHeading}>Step-by-step instructions</Text>
                       {
                       item.cookingstep.map((step, index) =>
                         <View key={index} style={styles.stepContainer}>
@@ -60,6 +61,7 @@ export default function CookingMode ({route}){
                           <Text style={styles.stepText}>{step}</Text>
                         </View>
                       )}
+                      </View>
                   </ScrollView>
                 </View>
               );
@@ -71,19 +73,28 @@ const Ingredient = ({ index }) => {
   const iData = IngredientsData.find((item) => item.id === index);
 
   return (
-    <View>
-      {/* <Text>{iData.name}</Text>
-      <Image style={styles.imageItem} source={{ uri: iData.src }} /> */}
-      {iData.ingredients.map((bla, index) => (
-        <Text style={styles.ingredients}  key={index}>{bla}</Text>
-      ))}
-    </View>
+    <View style={styles.ingredientTextContainer}>
+      <View style={styles.ingredientPadding}>
+        {
+          iData.ingredients.map((ingredient, index) => (
+            <Text key={index} style={styles.ingredientText}>{ingredientQuantity(ingredient)}</Text>
+          ))
+        }
+        </View>
+        <View style={styles.ingredientPadding}>
+        {
+          iData.ingredients.map((ingredient, index) => (
+            <Text>{ingredientDescription(ingredient)}</Text>
+          ))
+        }
+        </View>
+      </View>
   );
 };
 
 
 // TODO: add correct styles; just copy pasted the styles for now
-const styles = StyleSheet.create({
+/* const styles = StyleSheet.create({
   CookingMode: {
     flex: 1, // important for flatlist
     width: width,
@@ -144,4 +155,4 @@ const styles = StyleSheet.create({
     color: 'white',
     flex: 1,
   },
-  });
+  }); */
