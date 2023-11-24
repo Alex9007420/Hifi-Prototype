@@ -322,5 +322,34 @@ const IngredientsData =[
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
+
+    {
+        id: 37,
+        category: "Pizza topping",
+        name: "Cippoli e pepperoni",
+        ingredients: ["Onion", "Paprika", "Mozarella"],
+        picture: 'https://www.google.ru/url?sa=i&url=https%3A%2F%2Fwww.piccolericette.net%2Fpiccolericette%2Frecipe%2Fpizza-peperoni-e-prosciutto%2F&psig=AOvVaw1PuwiYPaPHYenZ9N46VGO_&ust=1700916437799000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCIDOzNbV3IIDFQAAAAAdAAAAABAD',
+        cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+
+    },
+
+    {
+        id: 38,
+        category: "Pizza topping",
+        name: "Napoletana",
+        ingredients: ["Mozarella", "Anchovies"],
+        picture: 'https://www.google.ru/url?sa=i&url=https%3A%2F%2Fwww.saporinostri.it%2Fen%2Fle-origini-della-pizza-ricetta-pizza-verace-napoletana%2F&psig=AOvVaw0LcaroBVELO5PklORgJdtV&ust=1700916503367000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCIC_-vLV3IIDFQAAAAAdAAAAABAD',
+        cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+
+    },
+    {
+        id: 39,
+        category: "Pizza topping",
+        name: "Prosciutto e funghi",
+        ingredients: ["Ham", "Mushrooms", "Mozarella"],
+        picture: 'https://www.google.ru/url?sa=i&url=https%3A%2F%2Fwww.piccolericette.net%2Fpiccolericette%2Frecipe%2Fpizza-al-prosciutto-e-funghi%2F&psig=AOvVaw02dY7wQRGF_Y8G0RCmu9FP&ust=1700916601500000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCIDMvKHW3IIDFQAAAAAdAAAAABAD',
+        cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+
+    },
     ];
 export default IngredientsData;
