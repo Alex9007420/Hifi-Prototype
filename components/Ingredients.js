@@ -166,7 +166,7 @@ ingredientQuantity = (ingredientString) => {
 ingredientDescription = (ingredientString) => {
   const separator = ingredientString.search(" ");
   return separator > 0
-    ? upperCaseWords(ingredientString.substring(separator))
+    ? upperCaseWords(ingredientString.substring(separator + 1))
     : upperCaseWords(ingredientString);
 }
 
