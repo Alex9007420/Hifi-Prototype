@@ -22,7 +22,8 @@ export default function Search ({navigation}) {
 
   return (
     <SafeAreaView style={styles.root}>
-      {!clicked && <Text style={styles.title}>Programming Languages</Text>}
+      {/* Removed to achieve a minimalistic design. */}
+      {/* !clicked && <Text style={styles.title}>Recipes</Text> */}
 
       
       
