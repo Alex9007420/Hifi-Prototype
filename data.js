@@ -1,8 +1,8 @@
 const RecipeData =[
-  {
+  {// Important, done in-detail
     id: "1",
     name: "Pizza",
-    details: ["Flour dough ", "Basic marinara ", "Mozarella"],
+    details: ["Classical Italian dish"],
     time: "30",
     src: 'https://images.prismic.io/eataly-us/ed3fcec7-7994-426d-a5e4-a24be5a95afd_pizza-recipe-main.jpg?auto=compress,format',
     tools: ["blender", "beaker", "stove", "trash-can", "microwave", "kettle", "grill", "pot-mix", "pot-steam", "chef-hat"],
@@ -11,16 +11,16 @@ const RecipeData =[
   {
     id: "2",
     name: "Steak",
-    details: ["BackEnd", "Data Science"],
+    details: ["Iconic", "For meat lovers"],
     time: "300",
     src: 'https://www.seriouseats.com/thmb/sGmCdh11W1YtdHhHjosa2alkPJM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__05__Anova-Steak-Guide-Sous-Vide-Photos15-beauty-159b7038c56a4e7685b57f478ca3e4c8.jpg',
     tools: ["grill", "chef-hat"],
     ingredients: ["Dough"],
   },
-  {
+  {// Important, done in-detail
     id: "3",
     name: "Pasta",
-    details: ["App Dev", "E-Commerce"],
+    details: ["Timeless"],
     time: "30",
     src: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-master768-v2.jpg?w=1280&q=75',
     tools: ["chef-hat", "kettle", "pan"],
@@ -29,7 +29,7 @@ const RecipeData =[
   {
     id: "4",
     name: "Butter Chicken",
-    details: ["Databases"],
+    details: ["Tender", "Luscious"],
     time: "60",
     src: 'https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&webp=true&resize=375,341',
     tools: ["beaker", "chef-hat"],
@@ -38,7 +38,7 @@ const RecipeData =[
   {
     id: "5",
     name: "Raclette Cheese",
-    details: ["Databases"],
+    details: ["Traditional Swiss dish", "For larger groups"],
     time: "550",
     src: 'https://recipecontent.fooby.ch/22016_1-1_334-334@2x.jpg',
     tools: ["kettle", "chef-hat"],
@@ -47,7 +47,7 @@ const RecipeData =[
   {
     id: "6",
     name: "Salmon Filet",
-    details: ["Game Dev", "Desktop Apps", "Mobile Apps"],
+    details: ["Healthy", "Seafood"],
     time: "10",
     src: 'https://www.sunset.com/wp-content/uploads/4_3_horizontal_inbody_900x506/nancy-silverton-salmon-steaks-sun-61837-0420.jpg',
     tools: ["pot-steam", "chef-hat"],
@@ -56,7 +56,7 @@ const RecipeData =[
   {
     id: "7",
     name: "Chinese dumplings",
-    details: ["Operating Systems", "VR", "Web Browsers"],
+    details: ["Handcrafted packets of joy"],
     time: "520",
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Xiaolongbao-breakfast.jpg/800px-Xiaolongbao-breakfast.jpg',
     tools: ["pot-steam", "chef-hat"],
@@ -65,7 +65,7 @@ const RecipeData =[
   {
     id: "8",
     name: "Fried Rice",
-    details: ["System Administration", "GUI Development"],
+    details: ["Quick and tasty dish"],
     time: "230",
     src: 'https://therecipecritic.com/wp-content/uploads/2019/08/easy_fried_rice-4.png',
     tools: ["pot-mix", "chef-hat"],
@@ -74,7 +74,7 @@ const RecipeData =[
   {
     id: "9",
     name: "Truffle Cream Pasta",
-    details: ["System Programming", "Audio Editing", "Big Data"],
+    details: ["Truffle-infused creamy delight"],
     time: "380",
     src: 'https://www.en-vols.com/wp-content/uploads/afmm/2022/10/thumbnail_PATES-A-LA-TRUFFE-e1665745916891.png',
     tools: ["blender", "chef-hat"],
@@ -83,34 +83,16 @@ const RecipeData =[
   {
     id: "10",
     name: "Käsespätzle",
-    details: ["System Programming", "Audio Editing", "Big Data"],
+    details: ["German classic"],
     time: "380",
     src: 'https://www.feinschmecker.de/uploads/media/jalag-content-image/03/8413-ka%CC%88sespa%CC%88tzle.gif?v=1-0',
     tools: ["pot-mix", "chef-hat"],
     ingredients: ["Dough"],
   },
   {
-    id: "11",
-    name: "Pizza al funghi",
-    details: ["Flour dough ", "Tomato sauce", "Mozarella"],
-    time: "30",
-    src: 'https://www.bella-cucina.de/wp-content/uploads/2016/11/pizza-funghi.jpg',
-    tools: ["stove", "chef-hat"],
-    ingredients: ["Dough", "Sauce", "Toppings"],
-  },
-  {
-    id: "12",
-    name: "Spaghetti Bolognese",
-    details: ["Pasta", "Bolognese sauce", "Parmesan"],
-    time: "10",
-    src: 'https://www.kitchensanctuary.com/wp-content/uploads/2019/09/Spaghetti-Bolognese-tall-FS-0204.webp',
-    tools: ["pot-steam", "chef-hat"],
-    ingredients: ["Pasta", "Sauce", "Cheese"],
-  },
-  {
     id: "13",
     name: "Burger",
-    details: [""],
+    details: ["Beef", "American go-to", "Quickie"],
     time: "20",
     src: 'https://insanelygoodrecipes.com/wp-content/uploads/2020/02/Burger-and-Fries.webp',
     tools: ["grill", "chef-hat"],
@@ -119,7 +101,7 @@ const RecipeData =[
   {
     id: "14",
     name: "Rosti",
-    details: [""],
+    details: ["Swiss crispy potato delight"],
     time: "20",
     src: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Roesti.jpg',
     tools: ["stove", "chef-hat"],
@@ -128,7 +110,7 @@ const RecipeData =[
   {
     id: "15",
     name: "Chinese Chicken",
-    details: [""],
+    details: ["Taste of Asia"],
     time: "60",
     src: 'https://www.kitchensanctuary.com/wp-content/uploads/2016/06/Crispy-Sesame-Chicken-Tall-FS.webp',
     tools: ["pot-steam", "chef-hat"],
@@ -137,7 +119,7 @@ const RecipeData =[
   {
     id: "16",
     name: "Fish'n chips",
-    details: [""],
+    details: ["Classic British fare"],
     time: "60",
     src: 'https://res.cloudinary.com/norgesgruppen/images/c_scale,dpr_auto,f_auto,q_auto:eco,w_1600/gpere8ubncwgn53hridh/fish-and-chips',
     tools: ["trashcan", "chef-hat"],
@@ -146,7 +128,7 @@ const RecipeData =[
   {
     id: "17",
     name: "Peking pork",
-    details: [""],
+    details: ["Peking-style savory", "Sweet glaze"],
     time: "90",
     src: 'https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/VRR6IGG37LD57PIPDASAGEPHEY.jpg&w=1200',
     tools: ["pot-steam", "chef-hat"],
@@ -155,7 +137,7 @@ const RecipeData =[
   {
     id: "18",
     name: "Goulash",
-    details: [""],
+    details: ["Hearty Hungarian stew", "Robust flavors", "Tender meat"],
     time: "90",
     src: 'https://happihomemade.com/wp-content/uploads/2021/01/beef-goulash-9733hwm-1024x683.jpg',
     tools: ["pot-steam", "chef-hat"],
@@ -164,7 +146,7 @@ const RecipeData =[
   {
     id: "19",
     name: "Crouton",
-    details: [""],
+    details: ["Crunchy", "Excellent day-starter"],
     time: "10",
     src: 'https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/grzanki-z-oregano-i-serem-gouda-277180.jpg',
     tools: ["blender", "chef-hat"],
@@ -173,7 +155,7 @@ const RecipeData =[
   {
     id: "20",
     name: "Salmon rolls",
-    details: [""],
+    details: ["Sushi-inspired", "Refreshing"],
     time: "15",
     src: 'https://ichisushi.com/wp-content/uploads/2022/04/Best-Salmon-Sushi-Recipes-1024x682.jpg',
     tools: ["stove", "chef-hat"],
@@ -182,7 +164,7 @@ const RecipeData =[
   {
     id: "21",
     name: "Paella",
-    details: [""],
+    details: ["Spanish masterpiece", "Array of mediterranean flavours"],
     time: "80",
     src: 'https://www.telegraph.co.uk/content/dam/food-and-drink/2018/04/03/TELEMMGLPICT000110435408_trans_NvBQzQNjv4BqyuLFFzXshuGqnr8zPdDWXiTUh73-1IAIBaONvUINpkg.jpeg?imwidth=680',
     tools: ["pot-mix", "chef-hat"],
@@ -191,7 +173,7 @@ const RecipeData =[
   {
     id: "22",
     name: "Meatballs soup",
-    details: [""],
+    details: ["Simple hearty broth"],
     time: "90",
     src: 'https://www.tastyeverafter.com/wp-content/uploads/2014/11/IMG_37001-1024x682.jpg',
     tools: ["pot-steam", "chef-hat"],
