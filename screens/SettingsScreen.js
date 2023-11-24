@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
+import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions } from 'react-native';
+const {width, height} = Dimensions.get('window');
 
 export default function SettingsScreen (){
     return(
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>⚙️ Setting</Text>
+        <View >
+        <Image style={{width: width}}source={require('../assets/Settings.png')} />
       </View>
      ) ;
 };
