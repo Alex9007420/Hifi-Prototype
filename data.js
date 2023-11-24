@@ -1,7 +1,7 @@
 const RecipeData =[
   {
     id: "1",
-    name: "Pizza Margherita",
+    name: "Pizza",
     details: ["Flour dough ", "Basic marinara ", "Mozarella"],
     time: "30",
     src: 'https://images.prismic.io/eataly-us/ed3fcec7-7994-426d-a5e4-a24be5a95afd_pizza-recipe-main.jpg?auto=compress,format',
@@ -19,12 +19,12 @@ const RecipeData =[
   },
   {
     id: "3",
-    name: "Spaghetti Carbonara",
+    name: "Pasta",
     details: ["App Dev", "E-Commerce"],
-    time: "50",
+    time: "30",
     src: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-master768-v2.jpg?w=1280&q=75',
-    tools: ["chef-hat"],
-    ingredients: ["Dough"],
+    tools: ["chef-hat", "kettle", "pan"],
+    ingredients: ["Pasta type", "Pasta sauce", "Pasta topping"],
   },
   {
     id: "4",

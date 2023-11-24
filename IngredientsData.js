@@ -403,6 +403,88 @@ const IngredientsData =[
         cookingstep: ["Pour your yeast-water mixture into a large mixing bowl and then slowly add the first half of the flour. This mixture will be like pancake batter, so then begin to add the rest of the flour to thicken it up. When you can't stir anymore it's ready for kneading. Scrape the dough onto your pastry matt that is dusted with left-over flour. You might need to add more flour to control the stickiness. When the dough is nice and smooth you can then put it aside to let it rise. The bowl you used for flour can work if it's all empty and cover with a kitchen towel. Be sure to let it sit in a warm area for one hour to have the maximum fluffiness you are looking for. Even up to 2 hours is always better for a very puffy crust. It depends on the warmth of the room too so 72-75F is best."],
 
     },
+    {
+        id: 46,
+        category: "Pasta type",
+        name: "Penne",
+        ingredients: [],
+        picture: 'https://www.the-pasta-project.com/wp-content/uploads/Penne-Pasta-1.jpg',
+        cookingstep: ["Cook for 7 minutes"],
 
+    },
+    {
+        id: 47,
+        category: "Pasta type",
+        name: "Fussili",
+        ingredients: [""],
+        picture: 'https://www.barillaforprofessionals.com/media/filer_public/e1/5b/e15b0816-f42d-4f6f-bcc5-0255bbd9665d/fusilli_classica-min.png',
+        cookingstep: ["Cook for 5 minutes"],
+
+    },
+    {
+        id: 48,
+        category: "Pasta type",
+        name: "Spaghetti",
+        ingredients: [""],
+        picture: 'https://www.barillaforprofessionals.com/media/filer_public/39/6e/396ea54a-eddc-405c-91e5-dec16836fd00/spaghettini_n3_classica-min.png',
+        cookingstep: ["Cook for 8 minutes"],
+
+    },
+    {
+        id: 49,
+        category: "Pasta type",
+        name: "Tagliatelle",
+        ingredients: [""],
+        picture: 'https://www.barillaforprofessionals.com/media/filer_public/a2/c7/a2c721d7-9b80-4918-921d-64d905cbd4de/tagliatelle.jpeg',
+        cookingstep: ["Cook for 10 minutes"],
+    },
+    {
+        id: 50,
+        category: "Pasta sauce",
+        name: "Carbonara",
+        ingredients: ["2tsp Olive oil", "200g Sliced pancetta", "3 Garlic cloves", "2 Egg yolks", "2 Eggs", "0.5cup Thickened cream", "75g Parmesan cheese"],
+        picture: 'https://1.bp.blogspot.com/-QVmtnzU4t74/UnN9YKF3utI/AAAAAAAAD50/kRAI8uCb5ho/s1600/P1030351.jpg',
+        cookingstep: ["Heat oil in a large, non-stick frying pan over medium heat. Add pancetta and garlic. Cook, stirring, for 5 minutes or until pancetta is crisp. Drain on paper towel.","Whisk egg yolks, eggs, cream and three-quarters of the parmesan together in a bowl. Season with salt and pepper.", "Add egg mixture and pancetta mixture to pasta. Season with salt and pepper. Toss over low heat until well combined. Serve with remaining parmesan."],
+    },
+    {
+        id: 51,
+        category: "Pasta sauce",
+        name: "Napoletana",
+        ingredients: ["1tbsp Olive oil", "1 Onion", "2 Garlic clove", "800g Tomatoes", "0.5cup Basil leaves"],
+        picture: 'https://madcreationshub.com/wp-content/uploads/2022/12/Napoli-Sauce-4.jpg',
+        cookingstep: ["Heat oil in a pot over medium-high heat. Add onion and garlic; cook stirring until soft.", "Add tomatoes and season to taste. Bring to a simmer, cover and cook stirring occasionally for 15-20 minutes. Remove garlic before serving. Stir through fresh basil and adjust seasoning as needed. If you want a smooth sauce use an immersion blender to puree the sauce to your liking."],
+    },
+    {
+        id: 52,
+        category: "Pasta sauce",
+        name: "Bolognese",
+        ingredients: ["1tbsp Olive oil", "4 Smoked bacon", "2 Onions", "2 Carrots", "2 celery sticks", "2 Garlic cloves", "500g Beef minced"],
+        picture: 'https://www.savorynothings.com/wp-content/uploads/2021/03/bolognese-sauce-image-step-sq.jpg',
+        cookingstep: ["Put a large saucepan on a medium heat and add 1 tbsp olive oil.", "Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp.", "Reduce the heat and add the 2 onions, 2 carrots, 2 celery sticks, 2 garlic cloves and the leaves from 2-3 sprigs rosemary, all finely chopped, then fry for 10 mins. Stir the veg often until it softens.", "Increase the heat to medium-high, add 500g beef mince and cook stirring for 3-4 mins until the meat is browned all over.", "Add 2 tins plum tomatoes, the finely chopped leaves from ¾ small pack basil, 1 tsp dried oregano, 2 bay leaves, 2 tbsp tomato purée, 1 beef stock cube, 1 deseeded and finely chopped red chilli (if using), 125ml red wine and 6 halved cherry tomatoes. Stir with a wooden spoon, breaking up the plum tomatoes.", "Bring to the boil, reduce to a gentle simmer and cover with a lid. Cook for 1 hr 15 mins stirring occasionally, until you have a rich, thick sauce."],
+    },
+    {
+        id: 53,
+        category: "Pasta topping",
+        name: "Shrimps",
+        ingredients: [],
+        picture: 'https://thewoodenskillet.com/wp-content/uploads/2021/08/pan-fried-shrimp-recipe-1.jpg',
+        cookingstep: ["Cook for 10 minutes"],
+    },
+    {
+        id: 54,
+        category: "Pasta topping",
+        name: "Tofu",
+        ingredients: [],
+        picture: 'https://images.immediate.co.uk/production/volatile/sites/30/2013/07/tofu-6a6a4ef.jpg?quality=90&resize=556,505',
+        cookingstep: [],
+    },
+    {
+        id: 55,
+        category: "Pasta topping",
+        name: "Bacon",
+        ingredients: [],
+        picture: 'https://www.marions-kochbuch.de/index-bilder/bacon.jpg',
+        cookingstep: ["Fry for 5 minutes"],
+    },
     ];
 export default IngredientsData;
