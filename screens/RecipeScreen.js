@@ -98,7 +98,6 @@ export default function Recipe({route, navigation}){
         <Text style={styles.header}>Utensils</Text>
         <View style={{
           padding: 20,
-          marginBottom: 220, // Bit of scrollable space at the bottom
           flex: 1,
           flexDirection: 'row',
           flexWrap: 'wrap',
@@ -108,10 +107,12 @@ export default function Recipe({route, navigation}){
           recipe.tools.map((tool) => <MaterialCommunityIcons name={tool} size={50} style={{padding: 10}} />)
         }
         </View>
-        <Text>arelkjadskljfkladsjflkasjfklajfkl</Text>
+
+        {/* Cooking Instructions */}
+        <Text style={styles.header}>Coking Instructions</Text>
         {selectedIngredients.map((ingredient)=>
-        <View style={styles.ingredientCategory}>
-          <Text>{ingredient.category}</Text>
+        <View style={styles.ingredientImageContainer}>
+          <Text style={styles.ingredientHeading}>{ingredient.category}</Text>
           {ingredient.cookingstep.map((step, index) =>
                         <View key={index} style={styles.stepContainer}>
                           <Text style={styles.stepNumber}>{index + 1}.</Text>
@@ -119,6 +120,9 @@ export default function Recipe({route, navigation}){
                         </View>
                       )}
         </View>)}
+
+        {/* Bit of scrollable space at bottom */}
+        <View style={{marginBottom: 220}}></View>
         
         
         
