@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions, ListView } from 'react-native';
+import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions, ListView, Button } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Infoscreen from './InfoScreen';
 import CookScreen from './CookScreen';
@@ -34,13 +34,39 @@ function timeString(minutes) {
 
 
 export default function Recipe({route, navigation}){
+
+
   const recipe = RecipeData.find((item) => item.id == route.params.id);
   const ingredients = IngredientsData.filter((item) => recipe.ingredients.includes(item.id));
   const [cookingIng, setcookingIng] = useState([]);
   const [CookingSteps, setCookingSteps]= useState([[]]);
   const [selectedIngredients, setSelectedIngredients]= useState([]);
+  const [ingredientMap, setIngredientMap] = useState(new Map());
+  const [showComponentA, setShowComponentA] = useState(false);
 
+  const handleIngredientSelect = (ingredient, item) => {
+    const newMap = new Map(ingredientMap);
+    newMap.set(ingredient, item);
+    setIngredientMap(newMap);
 
+    const ingredientNames = Array.from(ingredientMap.values());
+    const ingredientIds = ingredientNames.map((ingredientName) => {
+      const ingredient = IngredientsData.find((item) =>
+        item.name === ingredientName
+      );
+      return ingredient.id;
+    });
+
+    setcookingIng(ingredientIds);
+  };
+
+  const toggleComponent = () => {
+    setShowComponentA(!showComponentA);
+    setcookingIng([]);
+    setIngredientMap(new Map());
+  };
+
+  
 // useEffect to update cookingSteps when cookingIng changes
   useEffect(() => {
     // Filter IngredientsData based on the current cookingIng
@@ -84,16 +110,21 @@ export default function Recipe({route, navigation}){
         {/* INGREDIENTS */}
 
         <Text style={styles.header}>Ingredients</Text>
-        {
-          recipe.ingredients.map((ingredientCategory) => 
-            <>
-              {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}
-              <Text style={styles.subheader}>{ingredientCategory}</Text>
-              {/* AVAILABLE INGREDIENTS PER CATEGORY (e. g. for dough: pizza dough, cookie dough, ...) */}
-              <Ingredients category={ingredientCategory} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
-            </>
-          )
-        }
+        
+        <Button title="Toggle Component" onPress={toggleComponent} />
+  
+        {showComponentA ? <ComponentA 
+                      ingredients={ingredients}
+                      handleIngredientSelect={handleIngredientSelect}
+                      styles={styles}
+                    /> 
+                    : 
+                    <ComponentB 
+                      recipe={recipe} 
+                      cookingIng={cookingIng} 
+                      setcookingIng={setcookingIng}
+                      styles={styles}
+                    />}
 
         {/* UTENSILS */}
         <Text style={styles.header}>Utensils</Text>
