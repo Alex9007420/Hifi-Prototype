@@ -14,6 +14,9 @@ import RecipeTitleCard from '../components/RecipeTitleCard';
 import { FlatList } from 'react-native-gesture-handler';
 import { Constants } from 'react-native-navigation';
 import styles from '../components/Styles';
+import ComponentA from "../components/ComponentA";
+import ComponentB from "../components/ComponentB";
+
 const {width, height} = Dimensions.get('window');
 
 // Convert minutes (string or int) to hours and minutes in a human-readable string
@@ -42,21 +45,26 @@ export default function Recipe({route, navigation}){
   const [CookingSteps, setCookingSteps]= useState([[]]);
   const [selectedIngredients, setSelectedIngredients]= useState([]);
   const [ingredientMap, setIngredientMap] = useState(new Map());
-  const [showComponentA, setShowComponentA] = useState(false);
+  const [showComponentA, setShowComponentA] = useState(true);
 
   const handleIngredientSelect = (ingredient, item) => {
     const newMap = new Map(ingredientMap);
     newMap.set(ingredient, item);
+    
     setIngredientMap(newMap);
+    
+    console.log(Array.from(ingredientMap.values()));
 
-    const ingredientNames = Array.from(ingredientMap.values());
+    
+
+    const ingredientNames = Array.from(newMap.values());
     const ingredientIds = ingredientNames.map((ingredientName) => {
       const ingredient = IngredientsData.find((item) =>
         item.name === ingredientName
       );
       return ingredient.id;
     });
-
+    
     setcookingIng(ingredientIds);
   };
 
@@ -77,11 +85,12 @@ export default function Recipe({route, navigation}){
     // console.log("how long are you: "+ newCookingSteps.length)
     // console.log(" let's see if this works. newCookingSteps is: "+ newCookingSteps.toString())
     const temp = cookingIng.map((id)=> currentselectedIngredients.find((item)=> item.id === id))
+    console.log("We are inside the euseeffect hook! cookingIng is: "+ cookingIng)
 
     // Update cookingSteps state
     setCookingSteps(newCookingSteps);
     setSelectedIngredients(temp)
-  }, [cookingIng]);
+  }, [cookingIng, ingredientMap]);
 
 
   // Generate different active and total recipe preparation times,
@@ -109,12 +118,11 @@ export default function Recipe({route, navigation}){
 
         {/* INGREDIENTS */}
 
-        <Text style={styles.header}>Ingredients</Text>
         
         <Button title="Toggle Component" onPress={toggleComponent} />
   
         {showComponentA ? <ComponentA 
-                      ingredients={ingredients}
+                      ingredients={recipe.ingredients}
                       handleIngredientSelect={handleIngredientSelect}
                       styles={styles}
                     /> 

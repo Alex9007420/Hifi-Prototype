@@ -6,6 +6,7 @@ const ComponentA = ({ingredients, handleIngredientSelect, styles}) => {
 
     return (
         <>
+        <Text>Hi</Text>
             {ingredients && ingredients.map((item) => (
                 <View style={styles.dropdownView} key={item.id}>
                     <DropdownMenu ingredient={item} onIngredientSelect={handleIngredientSelect} />
