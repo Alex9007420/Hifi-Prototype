@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import { StyleSheet, View, Text, TextInput, ScrollView, Image, TouchableOpacity, Pressable, Dimensions, ListView } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Infoscreen from './InfoScreen';
@@ -12,6 +12,7 @@ import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 import RecipeTitleCard from '../components/RecipeTitleCard';
 import { FlatList } from 'react-native-gesture-handler';
+import { Constants } from 'react-native-navigation';
 import styles from '../components/Styles';
 const {width, height} = Dimensions.get('window');
 
@@ -36,6 +37,25 @@ export default function Recipe({route, navigation}){
   const recipe = RecipeData.find((item) => item.id == route.params.id);
   const ingredients = IngredientsData.filter((item) => recipe.ingredients.includes(item.id));
   const [cookingIng, setcookingIng] = useState([]);
+  const [CookingSteps, setCookingSteps]= useState([[]]);
+  const [selectedIngredients, setSelectedIngredients]= useState([]);
+
+
+// useEffect to update cookingSteps when cookingIng changes
+  useEffect(() => {
+    // Filter IngredientsData based on the current cookingIng
+    const currentselectedIngredients = IngredientsData.filter((item) => cookingIng.includes(item.id));
+
+    // Generate cookingSteps based on selectedIngredients
+    const newCookingSteps = currentselectedIngredients.map((ingredient)=> ingredient.cookingstep)
+    // console.log("how long are you: "+ newCookingSteps.length)
+    // console.log(" let's see if this works. newCookingSteps is: "+ newCookingSteps.toString())
+
+    // Update cookingSteps state
+    setCookingSteps(newCookingSteps);
+    setSelectedIngredients(currentselectedIngredients)
+  }, [cookingIng]);
+
 
   // Generate different active and total recipe preparation times,
   // as data.js only has one time field, not two.
@@ -88,27 +108,20 @@ export default function Recipe({route, navigation}){
           recipe.tools.map((tool) => <MaterialCommunityIcons name={tool} size={50} style={{padding: 10}} />)
         }
         </View>
-
-        {/* Cooking Steps
-        <Text style={styles.header}>Cooking Steps</Text>
-        <View style={{padding: 20, marginBottom: 220}}>
-        {selectedIngredients = IngredientsData.filter((item) => cookingIng.includes(item.id))}
-        <ListView 
-        data={selectedIngredients} 
-        renderItem={({item}) => {
-          return(
-            <View>
-            <Text style={styles.subheader}>{item.category}</Text>
-            {item.cookingstep.map((step, index) =>
-              <View key={index} style={styles.stepContainer}>
-                <Text style={styles.stepNumber}>{index + 1}.</Text>
-                <Text style={styles.stepText}>{step}</Text>
-              </View>
-            )}
-            </View>
-            )}}
-        />
-        </View> */}
+        <Text>arelkjadskljfkladsjflkasjfklajfkl</Text>
+        {selectedIngredients.map((ingredient)=>
+        <View style={styles.ingredientCategory}>
+          <Text>{ingredient.category}</Text>
+          {ingredient.cookingstep.map((step, index) =>
+                        <View key={index} style={styles.stepContainer}>
+                          <Text style={styles.stepNumber}>{index + 1}.</Text>
+                          <Text style={styles.stepText}>{step}</Text>
+                        </View>
+                      )}
+        </View>)}
+        
+        
+        
 
       </ScrollView>
       
