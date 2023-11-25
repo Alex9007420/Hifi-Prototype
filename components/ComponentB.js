@@ -6,7 +6,6 @@ import Ingredients from './Ingredients';
 const ComponentB = ({ recipe, cookingIng, setcookingIng, styles }) => {
     return (
         <View>
-            <Text style={styles.header}>Ingredients</Text>
             {recipe.ingredients && recipe.ingredients.map((ingredientCategory, index) => (
                 <React.Fragment key={index}>
                     {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}

@@ -44,9 +44,9 @@ const DropdownMenu = ({ingredient, onIngredientSelect}) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    marginTop: 10,
     alignItems: 'center',
-    width: '80%',
+    width: '100%',
   },
   button: {
     backgroundColor: '#007bff',

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Image} from 'react-native';
 import DropdownMenu from './DropdownMenu';
 import Ingredients from './Ingredients';
 import IngredientsData from '../IngredientsData';
@@ -11,12 +11,17 @@ const ComponentA = ({ingredients, handleIngredientSelect, styles}) => {
     return (
         <>
             {ingredients && ingredients.map((item) => (
+                <>
+                {/* INGREDIENT CATEGORY NAME (e.g. dough, sauce, toppings, ...) */}
+                <Text style={styles.subheader}>{item}</Text>
+                <View style={styles.ingredientImageContainer}>
                 <View style={styles.dropdownView} key={item.id}>
                     <DropdownMenu ingredient={item} onIngredientSelect={handleIngredientSelect} />
                     <Ingredient ingredient={item}/>
                 </View>
+                </View>
+                </>
             ))}
-            
         </>
     );
 
@@ -29,7 +34,12 @@ const Ingredient = ({ingredient}) => {
     
 
     return (
+        <>
+        <Image style={styles.ingredientImage}
+          source={{ uri: iData.picture }}
+        />
       <View style={styles.ingredientTextContainer}>
+        
         <View style={styles.ingredientPadding}>
           {
             iData.ingredients && iData.ingredients.map((ingredient, index) => (
@@ -45,6 +55,7 @@ const Ingredient = ({ingredient}) => {
           }
           </View>
         </View>
+        </>
     );
   };
   export default ComponentA;

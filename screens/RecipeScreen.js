@@ -117,6 +117,7 @@ export default function Recipe({route, navigation}){
         <Text style={styles.subheader}><MaterialCommunityIcons name={'clock-outline'} size={15}/> Active: {timeString(activeTime)} - Total: {timeString(totalTime)}</Text>
 
         {/* INGREDIENTS */}
+        <Text style={styles.header}>Ingredients</Text>
 
         
         <Button title="Toggle Component" onPress={toggleComponent} />
