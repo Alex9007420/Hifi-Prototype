@@ -27,7 +27,7 @@ export default function NotebookScreen ({navigation}){
     <ScrollView contentContainerStyle={styles.dashboard}>
         {NotebookData.map((item) => (
           <Pressable style={styles.dashboard}
-          onPress={()=> navigation.navigate("Recipe", {
+          onPress={()=> navigation.navigate("NotebookInfo", {
             id: item.id
           })}>
             {/* <Image key={item.id} style={styles.imageItem} source={{ uri: item.src }} /> */}
