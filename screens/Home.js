@@ -27,7 +27,7 @@ import MenuScreen from './MenuScreen';
 import SettingsScreen from './SettingsScreen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import CookingMode from './CookingModeScreen';
-import NotebookScreen from './NotebookScreen';
+import NotebookScreen from './NotebookScreen copy';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +40,7 @@ export default function Home() {
         name= "Info"
         component={Infoscreen}
         options= {{title: "Home" , 
-        tabBarIcon: () =>(
+      tabBarIcon: () =>(
         <MaterialCommunityIcons name='home' size={20}/>
             
       )}}

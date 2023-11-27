@@ -12,7 +12,7 @@ import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 import RecipeTitleCard from '../components/RecipeTitleCard';
 import { FlatList } from 'react-native-gesture-handler';
-// import { Constants } from 'react-native-navigation';
+import { Constants } from 'react-native-navigation';
 import styles from '../components/Styles';
 import ComponentA from "../components/ComponentA";
 import ComponentB from "../components/ComponentB";

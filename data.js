@@ -15,7 +15,7 @@ const RecipeData =[
     time: "300",
     src: 'https://www.seriouseats.com/thmb/sGmCdh11W1YtdHhHjosa2alkPJM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__05__Anova-Steak-Guide-Sous-Vide-Photos15-beauty-159b7038c56a4e7685b57f478ca3e4c8.jpg',
     tools: ["grill", "chef-hat"],
-    ingredients: ["Meat", "Throughness"],
+    ingredients: ["Dough"],
   },
   {// Important, done in-detail
     id: "3",
