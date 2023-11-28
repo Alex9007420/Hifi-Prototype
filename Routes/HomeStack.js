@@ -4,6 +4,8 @@ import Search from "../screens/Search";
 import Home from "../screens/Home";
 import Recipe from '../screens/RecipeScreen';
 import CookingMode from '../screens/CookingModeScreen';
+import NotebookInfo from '../screens/NotebookInfoScreen';
+import NotebookAdd from '../screens/NotebookAddRecipe';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +18,9 @@ function Stacks() {
         <Stack.Screen name="Recipe" component={Recipe}/>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Searchbar" component={Search} />
+        <Stack.Screen name="NotebookInfo" component={NotebookInfo} />
+        <Stack.Screen name="NotebookAdd" component={NotebookAdd} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

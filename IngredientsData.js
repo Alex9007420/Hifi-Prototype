@@ -486,5 +486,21 @@ const IngredientsData =[
         picture: 'https://www.marions-kochbuch.de/index-bilder/bacon.jpg',
         cookingstep: ["Fry for 5 minutes"],
     },
+    {
+        id: 56,
+        category: "Pasta sauce",
+        name: "Pesto",
+        ingredients: [],
+        picture: 'https://www.marions-kochbuch.de/index-bilder/bacon.jpg',
+        cookingstep: ["Fry for 5 minutes"],
+    },
+    {
+        id: 57,
+        category: "Meat",
+        name: "Rib Eye",
+        ingredients: [],
+        picture: 'https://www.marions-kochbuch.de/index-bilder/bacon.jpg',
+        cookingstep: ["Fry for 5 minutes"],
+    },
     ];
 export default IngredientsData;
