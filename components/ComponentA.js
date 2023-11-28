@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 import DropdownMenu from './DropdownMenu';
 import Ingredients from './Ingredients';
 import IngredientsData from '../IngredientsData';
 import styles from './Styles';
 
-const ComponentA = ({ingredients, handleIngredientSelect, styles}) => {
+const ComponentA = ({ingredients, handleIngredientSelect, styles, cookingIng}) => {
 
 
     return (
@@ -17,7 +17,7 @@ const ComponentA = ({ingredients, handleIngredientSelect, styles}) => {
                 <View style={styles.ingredientImageContainer}>
                 <View style={styles.dropdownView} key={item.id}>
                     <DropdownMenu ingredient={item} onIngredientSelect={handleIngredientSelect} />
-                    <Ingredient ingredient={item}/>
+                    <Ingredient ingredient={item} cookingIng={cookingIng}/>
                 </View>
                 </View>
                 </>
@@ -28,10 +28,25 @@ const ComponentA = ({ingredients, handleIngredientSelect, styles}) => {
 }
 
 
-const Ingredient = ({ingredient}) => {
-  console.log("what is ingredient? "+ ingredient)
-    const iData = IngredientsData.find((item) => item.category === ingredient);
+const Ingredient = ({ingredient, cookingIng}) => {
+  //console.log("___________________"+ ingredient+ "_____________________________")
+    const ingredientCategory = IngredientsData.filter((item) => item.category === ingredient);
+    //ingredientCategory.map((item)=> console.log(item.name));
+    const [iData, setiData]= useState(ingredientCategory[0]);
     
+    //console.log(ingredientCategory[0] + " has something in there")
+    //console.log(cookingIng+ " is please something! ")
+    const iftemp = ingredientCategory.find((item) => cookingIng.includes(item.id));
+    useEffect(() => {
+      if(iftemp){
+        setiData( ingredientCategory.find((item) => cookingIng.includes(item.id)));
+      }else{
+        setiData(ingredientCategory[0]);
+      }
+      
+    }, [cookingIng]); // Empty dependency array for componentDidMount behavior
+    
+    //console.log("is idata undef?"+ iData)
 
     return (
         <>

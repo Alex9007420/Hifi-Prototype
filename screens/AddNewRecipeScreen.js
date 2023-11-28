@@ -34,7 +34,7 @@ const AddNewRecipeScreen = ({ navigation }) => {
       const recipes = storedRecipes ? JSON.parse(storedRecipes) : [];
       recipes.push(newRecipe);
       await AsyncStorage.setItem('recipes', JSON.stringify(recipes));
-      console.log('Recipe added:', newRecipe);
+      //console.log('Recipe added:', newRecipe);
       Alert.alert("Recipe added!", "You are great!");
       navigation.navigate('Home'); // Go back to the Home screen
     } catch (error) {

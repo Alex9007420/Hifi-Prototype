@@ -13,11 +13,11 @@ import NotebookData from '../data/NotebookData';
     const [recipeArray, setRecipeArray] = useState(recipes);
 
     const handlePress = () => {
-        console.log('Button pressed');
+        //console.log('Button pressed');
         navigation.navigate("NotebookAdd", {
             onReturn: (data) => {
-                setRecipeArray([...recipeArray, data]);                console.log(data);
-                console.log(recipes.map(item => item.name));
+                setRecipeArray([...recipeArray, data]);               // console.log(data);
+                //console.log(recipes.map(item => item.name));
             }
         });
     };

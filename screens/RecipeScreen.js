@@ -53,7 +53,7 @@ export default function Recipe({route, navigation}){
     
     setIngredientMap(newMap);
     
-    console.log(Array.from(ingredientMap.values()));
+    //console.log(Array.from(ingredientMap.values()));
 
     
 
@@ -85,7 +85,7 @@ export default function Recipe({route, navigation}){
     // console.log("how long are you: "+ newCookingSteps.length)
     // console.log(" let's see if this works. newCookingSteps is: "+ newCookingSteps.toString())
     const temp = cookingIng.map((id)=> currentselectedIngredients.find((item)=> item.id === id))
-    console.log("We are inside the euseeffect hook! cookingIng is: "+ cookingIng)
+    //console.log("We are inside the euseeffect hook! cookingIng is: "+ cookingIng)
 
     // Update cookingSteps state
     setCookingSteps(newCookingSteps);
@@ -126,6 +126,7 @@ export default function Recipe({route, navigation}){
                       ingredients={recipe.ingredients}
                       handleIngredientSelect={handleIngredientSelect}
                       styles={styles}
+                      cookingIng={cookingIng}
                     /> 
                     : 
                     <ComponentB 

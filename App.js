@@ -12,7 +12,7 @@ import NotebookData from "./data/NotebookData";
 
 export default function App() {
   useEffect(() => {
-    console.log("useeffect");
+    //console.log("useeffect");
     initializeAsyncStorage().then(() => logAsyncStorageData());;
   }, []);
 

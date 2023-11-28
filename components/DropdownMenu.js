@@ -9,10 +9,10 @@ const DropdownMenu = ({ingredient, onIngredientSelect}) => {
 
   const items = IngredientsData.filter(item => item.category === ingredient);
 
-  console.log("ITEMSS: "  + items);
+  //console.log("ITEMSS: "  + items);
   return (
     <View style={styles.container}>
-      {console.log(onIngredientSelect)}
+      {/*console.log(onIngredientSelect)*/}
       <TouchableOpacity
         style={[styles.button, isOpen && styles.buttonActive]}
         onPress={() => setIsOpen(!isOpen)}
