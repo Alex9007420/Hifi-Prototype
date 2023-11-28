@@ -6,6 +6,7 @@ import TextOverImage from '../components/TextOverImage';
 
 
 
+
   export default function Infoscreen ({navigation}){ 
   // You need to put this in the function if you want to navigate (everything you need to do to be able to navigate)
     return(

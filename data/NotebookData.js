@@ -27,7 +27,7 @@ const NotebookData =[
       id: "5",
       name: "Notebook 5",
       src: "https://cdn-icons-png.flaticon.com/512/2005/2005938.png",
-      recipes: ["1","5"],
+      recipes: [],
     },
     
   ];
