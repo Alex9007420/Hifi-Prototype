@@ -366,7 +366,7 @@ const IngredientsData =[
         name: "Tomato",
         ingredients: ["2tbsp Olive oil", "1 Onion", "1 garlic clove", "800g Chopped tomatoes", "3tbsp Tomato puree", "2tbsp Dried oregano", "2tbsp Brown sugar", "Basil"],
         picture: 'https://joyfoodsunshine.com/wp-content/uploads/2018/09/best-homemade-pizza-sauce-recipe-1.jpg',
-        cookingstep: ["Heat the oil in a saucepan over a low heat, then add the onion along with a generous pinch of salt. Fry gently for 12-15 mins or until the onion has softened and is turning translucent. Add the garlic and fry for a further min. Tip in the tomatoes and purée along with the bay, oregano and sugar. Bring to the boil and lower the heat. Simmer, uncovered, for 30-35 mins or until thickened and reduced. Season. For a really smooth sauce, blitz with a stick blender, otherwise leave as is."],
+        cookingstep: ["Heat the oil in a saucepan over a low heat", "Add the onion along with a generous pinch of salt.", "Fry gently for 12-15 mins or until the onion has softened and is turning translucent.", "Add the garlic and fry for a further min. ", "Tip in the tomatoes and purée along with the bay, oregano and sugar.", "Bring to the boil and lower the heat. ","Simmer, uncovered, for 30-35 mins or until thickened and reduced. Season. ","For a really smooth sauce, blitz with a stick blender, otherwise leave as is."],
     },
     {
         id: 42,
@@ -374,7 +374,7 @@ const IngredientsData =[
         name: "Spicy",
         ingredients: ["2tbsp Olive oil", "1 Onion", "1 garlic clove", "800g Chopped tomatoes", "3tbsp Tomato puree", "2tbsp Dried oregano", "1tbsp Crushed red pepper extra hot", "Basil"],
         picture: 'https://donluciano.pizza/125-large_default/pizza-tonno-e-cipolla.jpg',
-        cookingstep: ["Place tomato sauce, tomatoes, garlic, basil, oregano and crushed red pepper in large saucepan. Season with salt and pepper, bring to a boil over medium-high heat. Reduce heat and simmer, allowing flavors to combine."],
+        cookingstep: ["Place tomato sauce, tomatoes, garlic, basil, oregano and crushed red pepper in large saucepan."," Season with salt and pepper.","Bring to a boil over medium-high heat.", "Reduce heat and simmer, allowing flavors to combine."],
     },
     {
         id: 43,
@@ -382,7 +382,7 @@ const IngredientsData =[
         name: "BBQ",
         ingredients: ["250ml Ketchup", "5tbsp Brown sugar", "3tbsp Apple cider vinegar", "1tsp Worcester sauce", "0.25tsp Mustard powder", "0.25tsp Onion powder"],
         picture: 'https://i0.wp.com/tableoflaughter.com/wp-content/uploads/2022/05/bbq-pizza-sauce-spoon-7.jpg?w=1200&ssl=1',
-        cookingstep: ["Combine all ingredients together in a small saucepan, on medium-low heat. Whisk everything together until it is all well combined and bring the mixture to a simmer. Partially cover the saucepan and let the sauce simmer for 10-15 minutes, stirring occasionally, until it has thickened. Let the sauce cool to room temperature before placing in the fridge to cool completely.Use as desired on pizzas."],
+        cookingstep: ["Combine all ingredients together in a small saucepan, on medium-low heat.", "Whisk everything together until it is all well combined and bring the mixture to a simmer.", "Partially cover the saucepan and let the sauce simmer for 10-15 minutes, stirring occasionally, until it has thickened.", "Let the sauce cool to room temperature before placing in the fridge to cool completely.Use as desired on pizzas."],
 
     },
     {
@@ -391,7 +391,7 @@ const IngredientsData =[
         name: "Traditional italian",
         ingredients: ["400ml Warm water", "1kg Flour", "3tbsp Fresh yeast", "6tbsp Olive oil", "1.5tsp Salt", "2tsp Sugar"],
         picture: 'https://www.nonnabox.com/wp-content/uploads/Pizza-Dough-Bread-83141-800x400.jpg',
-        cookingstep: ["Dump your flour, salt, and sugar into a bowl and mix them to get air-in helping break-up clumps the flour. Then- on a silicone pastry sheet carefully dump the flour onto the sheet forming a little mountain. Make a hole at the top (about fist-sized) for the water mixture to go in. Slowly pour the water mixture into the top of the flour pile.As this begins to wet-out the flour, then go to your original oil bowl. Take the flour bowl you used previously and with a pastry brush swab the remaining oil and wet-out the flour bowl. Once or twice is good. The flour dust will help the oil to stick to the bowl better. This is used later to put for your finished dough- now it won't stick. Then back to your flour and water mixture, start to mix in the remaining flour and get it blended until it starts to become a dough-like texture. This is when you can begin kneading it to make it smoother and more refined. Once you have it elastic enough, it should be rolled into a ball. Use a light dusting of flour nearby to keep your hands from sticking too much. Put the ball into the oiled bowl and give it a couple spins to coat the ball. Now you cover the bowl and let it sit. It will need 4-5 hours at room temperature to be truly authentic!"],
+        cookingstep: ["Dump your flour, salt, and sugar into a bowl and mix them to get air-in helping break-up clumps the flour.", "Then- on a silicone pastry sheet carefully dump the flour onto the sheet forming a little mountain.", "Make a hole at the top (about fist-sized) for the water mixture to go in.", "Slowly pour the water mixture into the top of the flour pile.", "As this begins to wet-out the flour, then go to your original oil bowl. Take the flour bowl you used previously and with a pastry brush swab the remaining oil and wet-out the flour bowl. Once or twice is good. The flour dust will help the oil to stick to the bowl better. This is used later to put for your finished dough- now it won't stick.", "Then back to your flour and water mixture, start to mix in the remaining flour and get it blended until it starts to become a dough-like texture. This is when you can begin kneading it to make it smoother and more refined.", "Once you have it elastic enough, it should be rolled into a ball. Use a light dusting of flour nearby to keep your hands from sticking too much. Put the ball into the oiled bowl and give it a couple spins to coat the ball.", "Now you cover the bowl and let it sit. It will need 4-5 hours at room temperature to be truly authentic!"],
 
     },
     {
@@ -400,7 +400,7 @@ const IngredientsData =[
         name: "Fluffy",
         ingredients: ["400ml Warm water", "1tbsp Yeast", "1tbsp Sugar", "1tsp Salt", "50ml Olive oil", "6cups Flour"],
         picture: 'https://www.withspice.com/wp-content/uploads/2020/07/chewy-pizza-dough-recipe-with-big-bubbles-in-crust-683x1024.jpg.webp',
-        cookingstep: ["Pour your yeast-water mixture into a large mixing bowl and then slowly add the first half of the flour. This mixture will be like pancake batter, so then begin to add the rest of the flour to thicken it up. When you can't stir anymore it's ready for kneading. Scrape the dough onto your pastry matt that is dusted with left-over flour. You might need to add more flour to control the stickiness. When the dough is nice and smooth you can then put it aside to let it rise. The bowl you used for flour can work if it's all empty and cover with a kitchen towel. Be sure to let it sit in a warm area for one hour to have the maximum fluffiness you are looking for. Even up to 2 hours is always better for a very puffy crust. It depends on the warmth of the room too so 72-75F is best."],
+        cookingstep: ["Pour your yeast-water mixture into a large mixing bowl and then slowly add the first half of the flour.", "This mixture will be like pancake batter, so then begin to add the rest of the flour to thicken it up. When you can't stir anymore it's ready for kneading.", "Scrape the dough onto your pastry matt that is dusted with left-over flour. You might need to add more flour to control the stickiness. When the dough is nice and smooth you can then put it aside to let it rise. The bowl you used for flour can work if it's all empty and cover with a kitchen towel.", "Be sure to let it sit in a warm area for one hour to have the maximum fluffiness you are looking for. Even up to 2 hours is always better for a very puffy crust. It depends on the warmth of the room too so 72-75F is best."],
 
     },
     {
@@ -444,7 +444,7 @@ const IngredientsData =[
         name: "Carbonara",
         ingredients: ["2tsp Olive oil", "200g Sliced pancetta", "3 Garlic cloves", "2 Egg yolks", "2 Eggs", "0.5cup Thickened cream", "75g Parmesan cheese"],
         picture: 'https://1.bp.blogspot.com/-QVmtnzU4t74/UnN9YKF3utI/AAAAAAAAD50/kRAI8uCb5ho/s1600/P1030351.jpg',
-        cookingstep: ["Heat oil in a large, non-stick frying pan over medium heat. Add pancetta and garlic. Cook, stirring, for 5 minutes or until pancetta is crisp. Drain on paper towel.","Whisk egg yolks, eggs, cream and three-quarters of the parmesan together in a bowl. Season with salt and pepper.", "Add egg mixture and pancetta mixture to pasta. Season with salt and pepper. Toss over low heat until well combined. Serve with remaining parmesan."],
+        cookingstep: ["Heat oil in a large, non-stick frying pan over medium heat.", "Add pancetta and garlic.", "Cook, stirring, for 5 minutes or until pancetta is crisp. Drain on paper towel.","Whisk egg yolks, eggs, cream and three-quarters of the parmesan together in a bowl. Season with salt and pepper.", "Add egg mixture and pancetta mixture to pasta. Season with salt and pepper. Toss over low heat until well combined. Serve with remaining parmesan."],
     },
     {
         id: 51,
@@ -452,7 +452,7 @@ const IngredientsData =[
         name: "Napoletana",
         ingredients: ["1tbsp Olive oil", "1 Onion", "2 Garlic clove", "800g Tomatoes", "0.5cup Basil leaves"],
         picture: 'https://madcreationshub.com/wp-content/uploads/2022/12/Napoli-Sauce-4.jpg',
-        cookingstep: ["Heat oil in a pot over medium-high heat. Add onion and garlic; cook stirring until soft.", "Add tomatoes and season to taste. Bring to a simmer, cover and cook stirring occasionally for 15-20 minutes. Remove garlic before serving. Stir through fresh basil and adjust seasoning as needed. If you want a smooth sauce use an immersion blender to puree the sauce to your liking."],
+        cookingstep: ["Heat oil in a pot over medium-high heat.", "Add onion and garlic; cook stirring until soft.", "Add tomatoes and season to taste.", "Bring to a simmer, cover and cook stirring occasionally for 15-20 minutes. Remove garlic before serving.", "Stir through fresh basil and adjust seasoning as needed.", "If you want a smooth sauce use an immersion blender to puree the sauce to your liking."],
     },
     {
         id: 52,
