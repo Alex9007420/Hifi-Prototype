@@ -6,11 +6,17 @@ import Search from "./screens/Search";
 import RecipeStorage from "./storage/RecipeStorage"
 import RecipeData from './data'; // Your existing RecipeData
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Alert } from 'react-native';
+import { Alert, LogBox } from 'react-native';
 import NotebookData from "./data/NotebookData";
 
-
 export default function App() {
+
+  {/*
+    DISABLE ALL WARNINGS
+    (user study)
+  */}
+  LogBox.ignoreAllLogs();
+
   useEffect(() => {
     //console.log("useeffect");
     initializeAsyncStorage().then(() => logAsyncStorageData());;
