@@ -51,7 +51,7 @@ export default function Home() {
         component={NotebookScreen}
         options= {{ 
       tabBarIcon: () =>(
-        <MaterialCommunityIcons name='home' size={20}/>
+        <MaterialCommunityIcons name='notebook' size={20}/>
             
       )}}
         ></Tab.Screen>
