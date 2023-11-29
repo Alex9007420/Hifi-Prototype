@@ -1,6 +1,6 @@
 const RecipeData =[
   {// Important, done in-detail
-    id: "1",
+    id: "11",
     name: "Pizza",
     details: ["Classical Italian dish"],
     time: "30",
