@@ -1,13 +1,4 @@
 const RecipeData =[
-  {// Important, done in-detail
-    id: "11",
-    name: "Pizza",
-    details: ["Classical Italian dish"],
-    time: "30",
-    src: 'https://images.prismic.io/eataly-us/ed3fcec7-7994-426d-a5e4-a24be5a95afd_pizza-recipe-main.jpg?auto=compress,format',
-    tools: ["blender", "beaker", "stove", "trash-can", "microwave", "kettle", "grill", "pot-mix", "pot-steam", "chef-hat"],
-    ingredients: ["Pizza dough", "Pizza sauce", "Pizza topping"],
-  },
   {
     id: "2",
     name: "Steak",
@@ -178,6 +169,15 @@ const RecipeData =[
     src: 'https://www.tastyeverafter.com/wp-content/uploads/2014/11/IMG_37001-1024x682.jpg',
     tools: ["pot-steam", "chef-hat"],
     ingredients: ["Meat", "Vegetables", "Pasta"],
+  },
+  {// Important, done in-detail
+    id: "11",
+    name: "Pizza",
+    details: ["Classical Italian dish"],
+    time: "30",
+    src: 'https://images.prismic.io/eataly-us/ed3fcec7-7994-426d-a5e4-a24be5a95afd_pizza-recipe-main.jpg?auto=compress,format',
+    tools: ["blender", "beaker", "stove", "trash-can", "microwave", "kettle", "grill", "pot-mix", "pot-steam", "chef-hat"],
+    ingredients: ["Pizza dough", "Pizza sauce", "Pizza topping"],
   },
 ];
 
