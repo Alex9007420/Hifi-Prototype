@@ -5,7 +5,7 @@ const {width, height} = Dimensions.get('window');
 export default function SettingsScreen (){
     return(
         <View >
-        {/* <Image style={{width: width}}source={require('../assets/Settings.png')} /> */}
+        {<Image style={{width: width}}source={require('../assets/Settings.png')} />}
       </View>
      ) ;
 };
