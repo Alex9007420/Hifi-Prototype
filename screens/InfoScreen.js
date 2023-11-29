@@ -7,7 +7,7 @@ import TextOverImage from '../components/TextOverImage';
 
 
 
-  export default function Infoscreen ({navigation}){ 
+  export default function Infoscreen ({navigation, showComponentA}){ 
   // You need to put this in the function if you want to navigate (everything you need to do to be able to navigate)
     return(
         <View style={styles.container}>
@@ -24,7 +24,8 @@ import TextOverImage from '../components/TextOverImage';
           {RecipeData.map((item) => (
             <Pressable style={styles.dashboard}
             onPress={()=> navigation.navigate("Recipe", {
-              id: item.id
+              id: item.id,
+              showComponentA: showComponentA,
             })}>
               <TextOverImage 
                 source={{ uri: item.src }} // Replace with your image source

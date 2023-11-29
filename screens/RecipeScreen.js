@@ -45,7 +45,6 @@ export default function Recipe({route, navigation}){
   const [CookingSteps, setCookingSteps]= useState([[]]);
   const [selectedIngredients, setSelectedIngredients]= useState([]);
   const [ingredientMap, setIngredientMap] = useState(new Map());
-  const [showComponentA, setShowComponentA] = useState(true);
 
   const handleIngredientSelect = (ingredient, item) => {
     const newMap = new Map(ingredientMap);
@@ -68,11 +67,7 @@ export default function Recipe({route, navigation}){
     setcookingIng(ingredientIds);
   };
 
-  const toggleComponent = () => {
-    setShowComponentA(!showComponentA);
-    setcookingIng([]);
-    setIngredientMap(new Map());
-  };
+ 
 
   
 // useEffect to update cookingSteps when cookingIng changes
@@ -120,9 +115,9 @@ export default function Recipe({route, navigation}){
         <Text style={styles.header}>Ingredients</Text>
 
         
-        <Button title="Toggle Component" onPress={toggleComponent} />
+        
   
-        {showComponentA ? <ComponentA 
+        {route.params.showComponentA ? <ComponentA 
                       ingredients={recipe.ingredients}
                       handleIngredientSelect={handleIngredientSelect}
                       styles={styles}
