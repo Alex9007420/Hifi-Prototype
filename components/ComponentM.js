@@ -36,7 +36,7 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
               renderItem={({ item }) => (
                 <TouchableWithoutFeedback onPress={() => handleOptionSelect(item)}>
                   <View style={mstyles.optionItem}>
-                    <Text>{item.name}{ item === selectedOption && " (active)"}</Text>
+                    <Text>{item.name}{ item.id === selectedOption.id && " (active)"}</Text>
                   </View>
                 </TouchableWithoutFeedback>
               )}
@@ -87,7 +87,6 @@ const mstyles = StyleSheet.create({
 
 
 const IngredientSection = ({ category, styles }) => {
-    // const options = ['Option 1', 'Option 2', 'Option 3'];
     const options = IngredientsData.filter((item) => (item.category === category));
     const [selectedOption, setSelectedOption] = useState(options[0]);
 
@@ -105,7 +104,7 @@ const IngredientSection = ({ category, styles }) => {
 };
 
 
-const ComponentM = ({ recipe, cookingIng, setcookingIng, styles }) => { // last parameter would be styles ;)
+const ComponentM = ({ recipe, cookingIng, setcookingIng, styles }) => {
     return (
         <View>
             { recipe.ingredients && recipe.ingredients.map((category) => (
