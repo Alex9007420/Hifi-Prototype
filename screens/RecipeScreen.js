@@ -16,6 +16,7 @@ import { FlatList } from 'react-native-gesture-handler';
 import styles from '../components/Styles';
 import ComponentA from "../components/ComponentA";
 import ComponentB from "../components/ComponentB";
+import ComponentM from '../components/ComponentM';
 
 const {width, height} = Dimensions.get('window');
 
@@ -114,22 +115,24 @@ export default function Recipe({route, navigation}){
         {/* INGREDIENTS */}
         <Text style={styles.header}>Ingredients</Text>
 
-        
-        
-  
-        {route.params.showComponentA ? <ComponentA 
-                      ingredients={recipe.ingredients}
-                      handleIngredientSelect={handleIngredientSelect}
-                      styles={styles}
-                      cookingIng={cookingIng}
-                    /> 
-                    : 
-                    <ComponentB 
-                      recipe={recipe} 
-                      cookingIng={cookingIng} 
-                      setcookingIng={setcookingIng}
-                      styles={styles}
-                    />}
+        {
+          /* A/B STUDY AND CORRESPONDING COMPONENTS */
+          route.params.showComponentA
+            ?
+            <ComponentM
+              recipe={recipe}
+              cookingIng={cookingIng}
+              setcookingIng={setcookingIng}
+              styles={styles}
+            />
+            :
+            <ComponentB
+              recipe={recipe}
+              cookingIng={cookingIng}
+              setcookingIng={setcookingIng}
+              styles={styles}
+            />
+        }
 
         {/* UTENSILS */}
         <Text style={styles.header}>Utensils</Text>
