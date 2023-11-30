@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, Modal, TouchableWithoutFeedback, TouchableOpacity, FlatList } from 'react-native';
 import IngredientsData from '../IngredientsData';
 import TwoColumnIngredientList from './TwoColumnIngredientList';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 const DropdownMenu = ({ options, onSelect, selectedOption }) => {
@@ -16,7 +17,13 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
       <View style={mstyles.container}>
         <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
           <View style={mstyles.selectedOption}>
-            <Text>{selectedOption.name}</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: 15, marginLeft: 0 }}>{selectedOption.name}</Text>
+            <MaterialCommunityIcons
+                name={
+                    modalVisible
+                    ? "arrow-up-bold-circle-outline"
+                    : "arrow-down-bold-circle-outline" }
+                size={20}/>
           </View>
         </TouchableWithoutFeedback>
 
@@ -51,10 +58,17 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
 const mstyles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-start',
+        justifyContent: '',
     },
     selectedOption: {
+        flex: 1,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        width: '100%',
+        marginTop: 20,
+        marginBottom: 10,
         padding: 10,
         borderWidth: 1,
         borderColor: '#ccc',
@@ -95,13 +109,13 @@ const IngredientSection = ({ category, styles }) => {
         setSelectedOption(option);
     };
     return (
-        <>
+        <View style={{ padding: 20 }}>
             <Image style={styles.ingredientImage}
                 source={{ uri: selectedOption.picture }}
             />
             <DropdownMenu options={options} onSelect={handleSelect} selectedOption={selectedOption}/>
             <TwoColumnIngredientList selectedOption={selectedOption}/>
-        </>
+        </View>
     );
 };
 
