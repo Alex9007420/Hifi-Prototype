@@ -146,7 +146,7 @@ export default function Recipe({route, navigation}){
         </View>
 
         {/* Cooking Instructions */}
-        <Text style={styles.header}>Coking Instructions</Text>
+        <Text style={styles.header}>Step-by-step Instructions</Text>
         {selectedIngredients.map((ingredient)=>
         <View style={styles.ingredientImageContainer}>
           <Text style={styles.ingredientHeading}>{ingredient.name}</Text>

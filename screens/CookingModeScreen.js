@@ -53,7 +53,7 @@ export default function CookingMode ({route}){
                       Ingredients
                     </Text>
                     <Ingredient index={item.id}/>
-                    <Text style={styles.ingredientHeading}>Step-by-step instructions</Text>
+                    <Text style={styles.ingredientHeading}>Step-by-step Instructions</Text>
                       {
                       item.cookingstep.map((step, index) =>
                         <View key={index} style={styles.stepContainer}>
