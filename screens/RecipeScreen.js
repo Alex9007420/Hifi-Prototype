@@ -149,7 +149,7 @@ export default function Recipe({route, navigation}){
         <Text style={styles.header}>Coking Instructions</Text>
         {selectedIngredients.map((ingredient)=>
         <View style={styles.ingredientImageContainer}>
-          <Text style={styles.ingredientHeading}>{ingredient.category}</Text>
+          <Text style={styles.ingredientHeading}>{ingredient.name}</Text>
           {ingredient.cookingstep.map((step, index) =>
                         <View key={index} style={styles.stepContainer}>
                           <Text style={styles.stepNumber}>{index + 1}.</Text>
