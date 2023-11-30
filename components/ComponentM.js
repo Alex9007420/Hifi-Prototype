@@ -99,6 +99,22 @@ const IngredientSection = ({ category, styles }) => {
                 source={{ uri: selectedOption.picture }}
             />
             <DropdownMenu options={options} onSelect={handleSelect} selectedOption={selectedOption}/>
+            <View style={styles.ingredientTextContainer}>
+                <View style={styles.ingredientPadding}>
+                {
+                    selectedOption.ingredients.map((ingredient) => (
+                        <Text style={styles.ingredientText}>{ingredientQuantity(ingredient)}</Text>
+                    ))
+                }
+                </View>
+                <View style={styles.ingredientPadding}>
+                {
+                    selectedOption.ingredients.map((ingredient) => (
+                        <Text>{ingredientDescription(ingredient)}</Text>
+                    ))
+                }
+                </View>
+            </View>
         </>
     );
 };
