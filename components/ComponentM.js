@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, Modal, TouchableWithoutFeedback, TouchableOpacity, FlatList } from 'react-native';
+import IngredientsData from '../IngredientsData';
 
 
 const DropdownMenu = ({ options, onSelect, selectedOption }) => {
     const [modalVisible, setModalVisible] = useState(false);
-  
+
     const handleOptionSelect = (option) => {
       onSelect(option);
       setModalVisible(false);
     };
-  
+
     return (
       <View style={mstyles.container}>
         <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
           <View style={mstyles.selectedOption}>
-            <Text>{selectedOption}</Text>
+            <Text>{selectedOption.name}</Text>
           </View>
         </TouchableWithoutFeedback>
-  
+
         <Modal
           transparent
           animationType="fade"
@@ -27,7 +28,7 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
           <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
             <View style={mstyles.modalOverlay} />
           </TouchableWithoutFeedback>
-  
+
           <View style={mstyles.modalContent}>
             <FlatList
               data={options}
@@ -35,7 +36,7 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
               renderItem={({ item }) => (
                 <TouchableWithoutFeedback onPress={() => handleOptionSelect(item)}>
                   <View style={mstyles.optionItem}>
-                    <Text>{item}{ item === selectedOption && " (active)"}</Text>
+                    <Text>{item.name}{ item === selectedOption && " (active)"}</Text>
                   </View>
                 </TouchableWithoutFeedback>
               )}
@@ -44,55 +45,77 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
         </Modal>
       </View>
     );
-  };
-  
-  const mstyles = StyleSheet.create({
+};
+
+const mstyles = StyleSheet.create({
     container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     selectedOption: {
-      padding: 10,
-      borderWidth: 1,
-      borderColor: '#ccc',
-      borderRadius: 5,
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        borderRadius: 5,
     },
     modalOverlay: {
-      flex: 1,
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        flex: 1,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
     },
     modalContent: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: '#fff',
-      borderTopLeftRadius: 10,
-      borderTopRightRadius: 10,
-      paddingBottom: 50,
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: '#fff',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        paddingBottom: 50,
     },
     optionItem: {
         margin: 5,
         marginBottom: 0,
-      padding: 15,
-      backgroundColor: '#ccc',
-      borderRadius: 8,
-      /*borderBottomWidth: 1,
-      borderBottomColor: '#ccc',*/
-      alignItems: 'left',
+        padding: 15,
+        backgroundColor: '#ccc',
+        borderRadius: 8,
+        /*borderBottomWidth: 1,
+        borderBottomColor: '#ccc',*/
+        alignItems: 'left',
     },
-  });
-  
+});
 
-const ComponentM = () => {
-    const options = ['Option 1', 'Option 2', 'Option 3'];
+
+const IngredientSection = ({ category, styles }) => {
+    // const options = ['Option 1', 'Option 2', 'Option 3'];
+    const options = IngredientsData.filter((item) => (item.category === category));
     const [selectedOption, setSelectedOption] = useState(options[0]);
-  
+
     const handleSelect = (option) => {
       setSelectedOption(option);
     };
-    return <View style={{ overflow: 'visible' }}><DropdownMenu options={options} onSelect={handleSelect} selectedOption={selectedOption}/></View>
+    return (
+        <>
+            <Image style={styles.ingredientImage}
+                source={{ uri: selectedOption.picture }}
+            />
+            <DropdownMenu options={options} onSelect={handleSelect} selectedOption={selectedOption}/>
+        </>
+    );
+};
+
+
+const ComponentM = ({ recipe, cookingIng, setcookingIng, styles }) => { // last parameter would be styles ;)
+    return (
+        <View>
+            { recipe.ingredients && recipe.ingredients.map((category) => (
+                <>
+                    <Text style={styles.subheader}>{category}</Text>
+                    <IngredientSection category={category} styles={styles}/>
+                </>
+            ))}
+        </View>
+    );
 };
 
 export default ComponentM;
