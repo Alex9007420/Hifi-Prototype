@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, Modal, TouchableWithoutFeedback, TouchableOpacity, FlatList } from 'react-native';
 import IngredientsData from '../IngredientsData';
+import TwoColumnIngredientList from './TwoColumnIngredientList';
 
 
 const DropdownMenu = ({ options, onSelect, selectedOption }) => {
@@ -91,7 +92,7 @@ const IngredientSection = ({ category, styles }) => {
     const [selectedOption, setSelectedOption] = useState(options[0]);
 
     const handleSelect = (option) => {
-      setSelectedOption(option);
+        setSelectedOption(option);
     };
     return (
         <>
@@ -99,22 +100,7 @@ const IngredientSection = ({ category, styles }) => {
                 source={{ uri: selectedOption.picture }}
             />
             <DropdownMenu options={options} onSelect={handleSelect} selectedOption={selectedOption}/>
-            <View style={styles.ingredientTextContainer}>
-                <View style={styles.ingredientPadding}>
-                {
-                    selectedOption.ingredients.map((ingredient) => (
-                        <Text style={styles.ingredientText}>{ingredientQuantity(ingredient)}</Text>
-                    ))
-                }
-                </View>
-                <View style={styles.ingredientPadding}>
-                {
-                    selectedOption.ingredients.map((ingredient) => (
-                        <Text>{ingredientDescription(ingredient)}</Text>
-                    ))
-                }
-                </View>
-            </View>
+            <TwoColumnIngredientList selectedOption={selectedOption}/>
         </>
     );
 };

@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, FlatList, Text, Image, Dimensions } from 'react-native';
 import IngredientsData from '../IngredientsData';
 import styles from './Styles';
+import upperCaseWords from './UpperCaseWords';
+import TwoColumnIngredientList from './TwoColumnIngredientList';
 
 const { width } = Dimensions.get('window');
 
@@ -145,30 +147,6 @@ const Ingredients = ({ category, cookingIng, setcookingIng }) => {
   );
 };
 
-upperCaseWords = (string) => {
-  var r = "";
-  for (var i = 0; i < string.length; ++i) {
-    if (i == 0 || string[i-1] == " ")
-      r += string[i].toUpperCase();
-    else
-      r += string[i];
-  }    
-  return r;
-}
-
-ingredientQuantity = (ingredientString) => {
-  const separator = ingredientString.search(" ");
-  return separator > 0
-    ? ingredientString.substring(0, separator)
-    : '';
-}
-
-ingredientDescription = (ingredientString) => {
-  const separator = ingredientString.search(" ");
-  return separator > 0
-    ? upperCaseWords(ingredientString.substring(separator + 1))
-    : upperCaseWords(ingredientString);
-}
 
 const Ingredient = ({ index }) => {
   const iData = IngredientsData.find((item) => item.id === index);
@@ -184,22 +162,7 @@ const Ingredient = ({ index }) => {
         <View style={{
         }}><Text style={styles.ingredientHeading}>{upperCaseWords(iData.name)}</Text>
         </View>
-        <View style={styles.ingredientTextContainer}>
-          <View style={styles.ingredientPadding}>
-          {
-            iData.ingredients.map((ingredient, index) => (
-              <Text key={index} style={styles.ingredientText}>{ingredientQuantity(ingredient)}</Text>
-            ))
-          }
-          </View>
-          <View style={styles.ingredientPadding}>
-          {
-            iData.ingredients.map((ingredient, index) => (
-              <Text>{ingredientDescription(ingredient)}</Text>
-            ))
-          }
-          </View>
-        </View>
+        <TwoColumnIngredientList selectedOption={iData}/>
       </View>
     </View>
   );
