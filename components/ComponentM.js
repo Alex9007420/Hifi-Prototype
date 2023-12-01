@@ -107,12 +107,20 @@ const mstyles = StyleSheet.create({
 });
 
 
-const IngredientSection = ({ category, styles }) => {
+const IngredientSection = ({ category, styles, cookingIng, setcookingIng }) => {
     const options = IngredientsData.filter((item) => (item.category === category));
     const [selectedOption, setSelectedOption] = useState(options[0]);
 
     const handleSelect = (option) => {
+        const backup = selectedOption.id;
         setSelectedOption(option);
+
+        const updatedCookingIng = cookingIng.map((id) => {
+            if (id == backup)
+                return option.id;
+            return id;
+        });
+        setcookingIng(updatedCookingIng);
     };
     return (
         <View style={{ padding: 20 }}>
@@ -127,12 +135,28 @@ const IngredientSection = ({ category, styles }) => {
 
 
 const ComponentM = ({ recipe, cookingIng, setcookingIng, styles }) => {
+
+    console.log("cooking ing: ");
+    console.log(cookingIng);
+
+    if (cookingIng.length === 0)
+    {
+        const firstOfEverything = recipe.ingredients.map((category) => {
+            return IngredientsData.filter((item) => (item.category === category))[0].id;
+        });
+        console.log("First of everything: ");
+        console.log(firstOfEverything);
+        console.log("cookingINg seems to be empty");
+        cookingIng = firstOfEverything;
+        setcookingIng(firstOfEverything);
+    }
+
     return (
         <View>
             { recipe.ingredients && recipe.ingredients.map((category) => (
                 <>
                     <Text style={styles.subheader}>{category}</Text>
-                    <IngredientSection category={category} styles={styles}/>
+                    <IngredientSection category={category} styles={styles} cookingIng={cookingIng} setcookingIng={setcookingIng}/>
                 </>
             ))}
         </View>
