@@ -52,10 +52,12 @@ import TextOverImage from '../components/TextOverImage';
       backgroundColor: '#fff',
       margin: 15,
       padding: 15,
-      marginTop: 0,
+      marginTop: -15,
+      marginBottom: 10,
       borderRadius: 15,
       borderWidth: 1,
       borderColor: "#ccc",
+      
     },
     searchInput: {
       height: 40,
