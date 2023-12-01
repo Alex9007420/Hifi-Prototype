@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
-import { StyleSheet, View, Text, Button, ScrollView, TouchableOpacity, Pressable } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { StyleSheet, View, Text, Alert, ScrollView, TouchableOpacity, Pressable } from 'react-native';
 import RecipeData from '../data';
 import TextOverImage from '../components/TextOverImage';
 import NotebookAdd from '../data/NotebookData';
 import NotebookData from '../data/NotebookData';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
   export default function NotebookInfoscreen ({route, navigation}){ 
@@ -12,14 +13,77 @@ import NotebookData from '../data/NotebookData';
 
     const [recipeArray, setRecipeArray] = useState(recipes);
 
+    useEffect(() => {
+      const loadData = async () => {
+        try {
+          const jsonValue = await AsyncStorage.getItem('@notebook' + notebook.id);
+          if (jsonValue != null) {
+            setRecipeArray(JSON.parse(jsonValue));
+          } else {
+            // Initialize with filtered RecipeData if nothing is stored yet
+            // const initialRecipes = RecipeData.filter(item => notebook.recipes.includes(item.id));
+            // setRecipeArray(initialRecipes);
+          }
+        } catch (e) {
+          console.error("Error reading data", e);
+        }
+      };
+  
+      loadData();
+    }, []);
+
+    const saveData = async (newRecipeArray) => {
+      try {
+        const jsonValue = JSON.stringify(newRecipeArray);
+        await AsyncStorage.setItem('@notebook' + notebook.id, jsonValue);
+      } catch (e) {
+        console.error("Error saving data", e);
+      }
+    };
+
+    const deleteRecipe = (recipeId) => {
+      const filteredRecipes = recipeArray.filter(recipe => recipe.id !== recipeId);
+      setRecipeArray(filteredRecipes);
+      saveData(filteredRecipes);
+    };
+
     const handlePress = () => {
-        //console.log('Button pressed');
-        navigation.navigate("NotebookAdd", {
-            onReturn: (data) => {
-                setRecipeArray([...recipeArray, data]);               // console.log(data);
-                //console.log(recipes.map(item => item.name));
-            }
-        });
+      navigation.navigate("NotebookAdd", {
+        onReturn: (newRecipe) => {
+          // Check if the recipe already exists in the array
+          if (!recipeArray.some(recipe => recipe.id === newRecipe.id)) {
+            const newRecipeArray = [...recipeArray, newRecipe];
+            setRecipeArray(newRecipeArray);
+            saveData(newRecipeArray);
+          } else {
+            Alert.alert(
+              "Duplicate Recipe",
+              "This recipe is already in your notebook.",
+              [
+                { text: "OK" }
+              ],
+              { cancelable: true }
+            );
+          }
+        }
+      });
+    };
+
+    const handleLongPress = (recipeId) => {
+      Alert.alert(
+        "Delete Recipe",
+        "Are you sure you want to delete this recipe?",
+        [
+          {
+            text: "Cancel",
+            style: "cancel"
+          },
+          { 
+            text: "OK", onPress: () => deleteRecipe(recipeId) 
+          }
+        ],
+        { cancelable: false }
+      );
     };
 
     return(
@@ -42,6 +106,8 @@ import NotebookData from '../data/NotebookData';
       <ScrollView contentContainerStyle={styles.dashboard}>
           {recipeArray.map((item) => (
             <Pressable style={styles.dashboard}
+            key={item.id}
+            onLongPress={() => handleLongPress(item.id)}
             onPress={()=> navigation.navigate("Recipe", {
               id: item.id
             })}>
