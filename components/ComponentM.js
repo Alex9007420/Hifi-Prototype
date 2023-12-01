@@ -14,51 +14,52 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
     };
 
     return (
-      <View style={mstyles.container}>
-        <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-          <View style={mstyles.selectedOption}>
-            <Text style={{ fontWeight: 'bold', fontSize: 15, marginLeft: 0 }}>{selectedOption.name}</Text>
-            <MaterialCommunityIcons
-                name={
-                    modalVisible
-                    ? "arrow-up-bold-circle-outline"
-                    : "arrow-down-bold-circle-outline" }
-                size={20}/>
-          </View>
-        </TouchableWithoutFeedback>
+        <View style={mstyles.container}>
+            <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
+                <View style={mstyles.selectedOption}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 15, marginLeft: 0 }}>{selectedOption.name}</Text>
+                    <MaterialCommunityIcons
+                        name={
+                        modalVisible
+                        ? "arrow-up-bold-circle-outline"
+                        : "arrow-down-bold-circle-outline" }
+                        size={20}
+                    />
+                </View>
+            </TouchableWithoutFeedback>
 
-        <Modal
-          transparent
-          animationType="fade"
-          visible={modalVisible}
-          onRequestClose={() => setModalVisible(false)}
-        >
-          <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
-            <View style={mstyles.modalOverlay} />
-          </TouchableWithoutFeedback>
-
-          <View style={mstyles.modalContent}>
-            <FlatList
-              data={options}
-              keyExtractor={(item) => item}
-              renderItem={({ item }) => (
-                <TouchableWithoutFeedback onPress={() => handleOptionSelect(item)}>
-                  <View style={mstyles.optionItem}>
-                    <View style={{
-                        width: 6,
-                        height: item.id == selectedOption.id ? 18 : 6,
-                        borderRadius: 3,
-                        backgroundColor: item.id == selectedOption.id ? "#000" : "#ccc",
-                    }}></View>
-                    <Text style={{ marginLeft: 20, fontSize: 14, lineHeight: 18 }}>{item.name}</Text>
-                  </View>
+            <Modal
+                transparent
+                animationType="fade"
+                visible={modalVisible}
+                onRequestClose={() => setModalVisible(false)}
+            >
+                <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
+                    <View style={mstyles.modalOverlay} />
                 </TouchableWithoutFeedback>
-              )}
-            />
-          </View>
-        </Modal>
-      </View>
-    );
+
+                <View style={mstyles.modalContent}>
+                <FlatList
+                    data={options}
+                    keyExtractor={(item) => item}
+                    renderItem={({ item }) => (
+                        <TouchableWithoutFeedback onPress={() => handleOptionSelect(item)}>
+                            <View style={mstyles.optionItem}>
+                                <View style={{
+                                width: 6,
+                                height: item.id == selectedOption.id ? 18 : 6,
+                                borderRadius: 3,
+                                backgroundColor: item.id == selectedOption.id ? "#000" : "#ccc",
+                                }}></View>
+                                <Text style={{ marginLeft: 20, fontSize: 14, lineHeight: 18 }}>{item.name}</Text>
+                            </View>
+                        </TouchableWithoutFeedback>
+                    )}
+                />
+                </View>
+            </Modal>
+        </View>
+        );
 };
 
 const mstyles = StyleSheet.create({
@@ -136,17 +137,11 @@ const IngredientSection = ({ category, styles, cookingIng, setcookingIng }) => {
 
 const ComponentM = ({ recipe, cookingIng, setcookingIng, styles }) => {
 
-    console.log("cooking ing: ");
-    console.log(cookingIng);
-
     if (cookingIng.length === 0)
     {
         const firstOfEverything = recipe.ingredients.map((category) => {
             return IngredientsData.filter((item) => (item.category === category))[0].id;
         });
-        console.log("First of everything: ");
-        console.log(firstOfEverything);
-        console.log("cookingINg seems to be empty");
         cookingIng = firstOfEverything;
         setcookingIng(firstOfEverything);
     }
