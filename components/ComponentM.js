@@ -51,7 +51,7 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
                                     borderRadius: 3,
                                     backgroundColor: item.id == selectedOption.id ? "#000" : "#ccc",
                                     }}></View>
-                                    <Text style={{ marginLeft: 20, fontSize: 14, lineHeight: 18 }}>{item.name}</Text>
+                                    <Text style={{ marginLeft: 20, fontSize: 16, lineHeight: 18 }}>{item.name}</Text>
                                 </View>
                             </TouchableWithoutFeedback>
                         )}
@@ -103,7 +103,8 @@ const mstyles = StyleSheet.create({
         margin: 5,
         marginBottom: 0,
         padding: 15,
-        paddingBottom: 0,
+        borderRadius: 8,
+        backgroundColor: '#eee',
     },
 });
 
