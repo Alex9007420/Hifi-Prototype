@@ -39,23 +39,23 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
                 </TouchableWithoutFeedback>
 
                 <View style={mstyles.modalContent}>
-                <FlatList
-                    data={options}
-                    keyExtractor={(item) => item}
-                    renderItem={({ item }) => (
-                        <TouchableWithoutFeedback onPress={() => handleOptionSelect(item)}>
-                            <View style={mstyles.optionItem}>
-                                <View style={{
-                                width: 6,
-                                height: item.id == selectedOption.id ? 18 : 6,
-                                borderRadius: 3,
-                                backgroundColor: item.id == selectedOption.id ? "#000" : "#ccc",
-                                }}></View>
-                                <Text style={{ marginLeft: 20, fontSize: 14, lineHeight: 18 }}>{item.name}</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                    )}
-                />
+                    <FlatList
+                        data={options}
+                        keyExtractor={(item) => item}
+                        renderItem={({ item }) => (
+                            <TouchableWithoutFeedback onPress={() => handleOptionSelect(item)}>
+                                <View style={mstyles.optionItem}>
+                                    <View style={{
+                                    width: 6,
+                                    height: item.id == selectedOption.id ? 18 : 6,
+                                    borderRadius: 3,
+                                    backgroundColor: item.id == selectedOption.id ? "#000" : "#ccc",
+                                    }}></View>
+                                    <Text style={{ marginLeft: 20, fontSize: 14, lineHeight: 18 }}>{item.name}</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                        )}
+                    />
                 </View>
             </Modal>
         </View>
