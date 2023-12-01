@@ -4,7 +4,7 @@ const IngredientsData =[
       category: "Dough",
       name: "Pizza dough",
       ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
-      picture: 'https://picsum.photos/200/300?random=10',
+      picture: 'https://www.onceuponachef.com/images/2020/06/Pizza-Dough-scaled.jpg',
       cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -13,33 +13,33 @@ const IngredientsData =[
         category: "Sauce",
         name: "Basic Sauce",
         ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.thespruceeats.com/thmb/sxzXBHFaUyJ1qs0AKHpmnm2kvsA=/4256x2832/filters:fill(auto,1)/basic-white-sauce-4172027-hero-01-dbc48b39ce74474daf41af384595407d.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
     {
         id: 3,
         category: "Toppings",
-        name: "dog",
+        name: "olives",
         ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://www.olivesfromspain.uk/wp-content/uploads/2018/01/1.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
     },
     {
         id: 4,
         category: "Dough",
-        name: "fish",
+        name: "sardines",
         ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://bradleysfish.com/wp-content/uploads/2021/05/Sardines-1kg-2-Custom.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
     {
         id: 5,
         category: "Dough",
-        name: "bla",
+        name: "cake dough",
         ingredients: ["400g flour", "1.5TL salt", "0.25 cubes yeast", "2.5dl water", "2EL Olive Oil"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://i1.wp.com/www.asliceofsweet.com/wp-content/uploads/2018/04/12-e1523302439498.jpg?fit=2987%2C3665&ssl=1',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -48,7 +48,7 @@ const IngredientsData =[
         category: "Pasta",
         name: "Spaghetti",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://thumbs.dreamstime.com/b/spaghetti-60602682.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -57,7 +57,7 @@ const IngredientsData =[
         category: "Cheese",
         name: "Mild",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://static.wixstatic.com/media/c99abc_031f3b44a4c5480198d6b4244e0bc3ed~mv2.jpeg/v1/fill/w_827,h_551,al_c,q_85,usm_0.66_1.00_0.01/c99abc_031f3b44a4c5480198d6b4244e0bc3ed~mv2.jpeg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -66,7 +66,7 @@ const IngredientsData =[
         category: "Burger bums",
         name: "Regular bums",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://www.inthekitchenwithapril.com/wp-content/uploads/2017/04/Best-Ever-Homemade-Burger-Buns.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -75,7 +75,7 @@ const IngredientsData =[
         category: "Vegetables",
         name: "Onion",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://i.pinimg.com/originals/13/2b/12/132b1227d6c5595567801000b04dbda4.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -84,7 +84,7 @@ const IngredientsData =[
         category: "Vegetables",
         name: "Patato",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://www.valleyspuds.com/wp-content/uploads/Russet-Potatoes-cut.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -93,7 +93,7 @@ const IngredientsData =[
         category: "Vegetables",
         name: "Tomato",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.beyondfruits.co.ke/wp-content/uploads/2021/01/Tomatos.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -102,7 +102,7 @@ const IngredientsData =[
         category: "Vegetables",
         name: "Paprika",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.garten-ratgeber.com/wp-content/uploads/2017/03/paprika-715289-1024x680.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -111,7 +111,7 @@ const IngredientsData =[
         category: "Vegetables",
         name: "Carrot",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://pngimg.com/uploads/carrot/carrot_PNG4985.png',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -120,7 +120,7 @@ const IngredientsData =[
         category: "Sauce",
         name: "Soya",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://eldiariony.com/wp-content/uploads/sites/2/2020/01/shutterstock_1067796980.jpg?quality=80&strip=all',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -129,7 +129,7 @@ const IngredientsData =[
         category: "Spices",
         name: "Sugar",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://sabnazintl.com/wp-content/uploads/2019/06/shutterstock_613073507.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -138,7 +138,7 @@ const IngredientsData =[
         category: "Spices",
         name: "Ginger",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://www.almanaturals.net/sites/default/files/product-images/ginger.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -147,7 +147,7 @@ const IngredientsData =[
         category: "Spices",
         name: "Garlic",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://www.publicdomainpictures.net/pictures/30000/velka/garlic-1355275160pmp.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -156,7 +156,7 @@ const IngredientsData =[
         category: "Spices",
         name: "Vanilla sugar",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.vanillavaza.com/wp-content/uploads/2015/11/250-1.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -165,7 +165,7 @@ const IngredientsData =[
         category: "Alcohol",
         name: "Beer",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://pavbca.com/walldb/original/7/6/a/371700.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -174,7 +174,7 @@ const IngredientsData =[
         category: "Alcohol",
         name: "Red wine",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.botswanayouth.com/wp-content/uploads/2017/08/red-wine1.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -183,7 +183,7 @@ const IngredientsData =[
         category: "Spices",
         name: "Safran",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://p5.storage.canalblog.com/56/20/1032037/84817750_o.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -192,7 +192,7 @@ const IngredientsData =[
         category: "Rice",
         name: "Basmati",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.thespruceeats.com/thmb/dcr8sHq3QyEfm2DmmRTK4UZ2uiA=/5184x3456/filters:no_upscale():max_bytes(150000):strip_icc()/basmati-rice-in-a-bowl-with-a-spoon-519309138-7ca58970c0914bb9b117d43cb09d7dd8.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -201,7 +201,7 @@ const IngredientsData =[
         category: "Misc",
         name: "Honey",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://media2.popsugar-assets.com/files/2014/11/13/660/n/1922153/bd19a2c4e3c5480f_shutterstock_115307500w3bEgI.xxxlarge_2x/i/Honey.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -210,7 +210,7 @@ const IngredientsData =[
         category: "Misc",
         name: "Rice vinegar",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://i5.walmartimages.com/asr/6954a3b8-5209-41cf-8aff-7f5bce852f93_1.1b585f5e594a9f48adbd246bafae497a.jpeg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -219,7 +219,7 @@ const IngredientsData =[
         category: "Sauce",
         name: "Ketchup",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://cdnimg.webstaurantstore.com/images/products/xxl/169217/2216808.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -228,7 +228,7 @@ const IngredientsData =[
         category: "Cheese",
         name: "Philadelphia cheese",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://assets.iceland.co.uk/i/iceland/philadelphia_original_soft_cheese_180g_7543_T5.jpg?$pdpzoom$',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -237,7 +237,7 @@ const IngredientsData =[
         category: "Misc",
         name: "Pita bread",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://static.fanpage.it/wp-content/uploads/sites/22/2020/05/Pita-22.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -246,7 +246,7 @@ const IngredientsData =[
         category: "Fish",
         name: "Cod",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://www.gannett-cdn.com/-mm-/56a9fb62fb3e460dd1ea7f14c471e6271fa7020e/c=0-162-3578-2183&r=x1683&c=3200x1680/local/-/media/2016/10/05/USATODAY/USATODAY/636112553813827771-iStock-30618708-LARGE.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -255,7 +255,7 @@ const IngredientsData =[
         category: "Fish",
         name: "Salmon",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://static01.nyt.com/images/2016/01/05/multimedia/roast-a-filet-salmon/roast-a-filet-salmon-superJumbo.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -264,7 +264,7 @@ const IngredientsData =[
         category: "Sauce",
         name: "BBQ sauce",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://i5.walmartimages.com/asr/d3d586c8-1947-4477-89f6-4380858c902c_1.6db92b677a5bc2f1d286688a812c345d.jpeg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -273,7 +273,7 @@ const IngredientsData =[
         category: "Greens",
         name: "Salad",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'http://www.laaloosh.com/wp-content/uploads/2015/09/Greek-Salad-2.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -282,7 +282,7 @@ const IngredientsData =[
         category: "Greens",
         name: "Dill",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.farmizen.com/wp-content/uploads/2017/07/dill-2500-56a20f953df78cf772718536.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -291,7 +291,7 @@ const IngredientsData =[
         category: "Misc",
         name: "Butter",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://img.maximummedia.ie/joe_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtam9lLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE5XFxcLzA2XFxcLzE0MTM0ODE3XFxcL0J1dHRlci5qcGdcIixcIndpZHRoXCI6NjQ3LFwiaGVpZ2h0XCI6MzQwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuam9lLmllXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvam9lXFxcL25vLWltYWdlLnBuZz9pZD0yNjRhMmRiZTM3MGYyYzY3NWZjZFwiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiJjOTljYTJhYThjZTViNWI0ZjgzY2NiZDcwODUwOGVhNmRjNzNmMTM5In0=/butter.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -300,7 +300,7 @@ const IngredientsData =[
         category: "Meat",
         name: "Chicken",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://cdn.wonderfuldiy.com/wp-content/uploads/2016/03/Honey-orange-BBQ-chicken.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -309,7 +309,7 @@ const IngredientsData =[
         category: "Meat",
         name: "Pork",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.thespruceeats.com/thmb/3N31JDnA1rj0ysC07BGfMmzBKB8=/2048x1365/filters:fill(auto,1)/garlic-and-herb-crusted-pork-loin-roast-3059504-7_preview-5b2bc4f88023b90037a968fa.jpeg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
@@ -318,7 +318,7 @@ const IngredientsData =[
         category: "Meat",
         name: "Beef",
         ingredients: ["something"],
-        picture: 'https://picsum.photos/200/300?random=10',
+        picture: 'https://www.wagyubeefsingapore.com/wp-content/uploads/2019/11/Canva-Kuroge-Wagyu-beef-sirloin-copy.jpg',
         cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
 
     },
