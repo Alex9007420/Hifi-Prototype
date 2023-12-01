@@ -12,7 +12,7 @@ import TextOverImage from '../components/TextOverImage';
     return(
         <View style={styles.container}>
       {/* Search Bar Header */}
-      <View style={styles.searchContainer}>
+      <View >
         <Pressable style={styles.searchContainer}
         onPress={()=> navigation.navigate("Searchbar", {
           showComponentA: showComponentA,
@@ -50,6 +50,12 @@ import TextOverImage from '../components/TextOverImage';
     searchContainer: {
       padding: 10,
       backgroundColor: '#fff',
+      margin: 15,
+      padding: 15,
+      marginTop: 0,
+      borderRadius: 15,
+      borderWidth: 1,
+      borderColor: "#ccc",
     },
     searchInput: {
       height: 40,
