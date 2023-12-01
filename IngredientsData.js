@@ -329,7 +329,7 @@ const IngredientsData =[
         name: "Cippoli e pepperoni",
         ingredients: ["Onion", "Paprika", "Mozarella"],
         picture: 'https://i0.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2016/07/3015_Pizza.jpg?zoom=2&resize=595%2C410&ssl=1',
-        cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+        cookingstep: ["Arrange the listed ingredients to your liking."],
 
     },
 
@@ -339,7 +339,7 @@ const IngredientsData =[
         name: "Napoletana",
         ingredients: ["Mozarella", "Anchovies"],
         picture: 'https://www.saporinostri.it/wp-content/uploads/2020/10/le-origini-della-pizza-napoletana-e1601990439881.jpg',
-        cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+        cookingstep: ["Arrange the listed ingredients to your liking."],
 
     },
     {
@@ -348,7 +348,7 @@ const IngredientsData =[
         name: "Prosciutto e funghi",
         ingredients: ["Ham", "Mushrooms", "Mozarella"],
         picture: 'https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/10/4102_Pizza.jpg?resize=895%2C616&ssl=1',
-        cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+        cookingstep: ["Arrange the listed ingredients to your liking."],
 
     },
     {
@@ -357,7 +357,7 @@ const IngredientsData =[
         name: "Al tonno",
         ingredients: ["Tuna", "Mozarella", "Onion"],
         picture: 'https://donluciano.pizza/125-large_default/pizza-tonno-e-cipolla.jpg',
-        cookingstep: ["Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet", "consetetur sadipscing elitr", "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat", "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren", "no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+        cookingstep: ["Arrange the listed ingredients to your liking."],
 
     },
     {
