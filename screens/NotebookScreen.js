@@ -15,13 +15,7 @@ export default function NotebookScreen ({navigation}){
   <View style={styles.container}>
 
       
-    {/* Search Bar Header */}
-    <View style={styles.searchContainer}>
-      <Pressable style={styles.searchContainer}
-      onPress={()=> navigation.navigate("Searchbar")}> 
-        <Text> Search for Recipes...</Text>
-      </Pressable>
-    </View>
+    
 
     {/* Dashboard */}
     <ScrollView contentContainerStyle={styles.dashboard}>
