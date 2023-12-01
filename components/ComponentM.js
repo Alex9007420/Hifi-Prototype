@@ -44,7 +44,13 @@ const DropdownMenu = ({ options, onSelect, selectedOption }) => {
               renderItem={({ item }) => (
                 <TouchableWithoutFeedback onPress={() => handleOptionSelect(item)}>
                   <View style={mstyles.optionItem}>
-                    <Text>{item.name}{ item.id === selectedOption.id && " (active)"}</Text>
+                    <View style={{
+                        width: 6,
+                        height: item.id == selectedOption.id ? 18 : 6,
+                        borderRadius: 3,
+                        backgroundColor: item.id == selectedOption.id ? "#000" : "#ccc",
+                    }}></View>
+                    <Text style={{ marginLeft: 20, fontSize: 14, lineHeight: 18 }}>{item.name}</Text>
                   </View>
                 </TouchableWithoutFeedback>
               )}
@@ -86,17 +92,17 @@ const mstyles = StyleSheet.create({
         backgroundColor: '#fff',
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
-        paddingBottom: 50,
+        paddingBottom: 75,
     },
     optionItem: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
         margin: 5,
         marginBottom: 0,
         padding: 15,
-        backgroundColor: '#ccc',
-        borderRadius: 8,
-        /*borderBottomWidth: 1,
-        borderBottomColor: '#ccc',*/
-        alignItems: 'left',
+        paddingBottom: 0,
     },
 });
 
