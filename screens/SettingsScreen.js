@@ -12,7 +12,7 @@ export default function SettingsScreen ({showComponentA, setShowComponentA}){
     return(
         <ScrollView >
           <Image style={{width: width}}source={require('../assets/Settings.png')} />
-          <Button title="Toggle Component" onPress={toggleComponent} />
+          <Button title={showComponentA?"Change to component B" : "Change to component A"} onPress={toggleComponent} />         
         </ScrollView>
      ) ;
 };

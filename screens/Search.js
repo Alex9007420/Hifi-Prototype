@@ -12,11 +12,11 @@ import List from "../components/List";
 import SearchBar from "../components/SearchBar";
 import RecipeData from "../data";
 
-export default function Search ({navigation}) {
+export default function Search ({navigation, route}) {
   const [searchPhrase, setSearchPhrase] = useState("");
   const [clicked, setClicked] = useState(false);
 
-
+console.log("inside search showcomponentA is: "+ route.params.showComponentA);
 
   
 
@@ -39,7 +39,8 @@ export default function Search ({navigation}) {
             data={RecipeData}
             setClicked={setClicked}
             navigationf={(index)=> navigation.navigate("Recipe", {
-              id: index
+              id: index,
+              showComponentA: route.params.showComponentA,
             })}
           />
         

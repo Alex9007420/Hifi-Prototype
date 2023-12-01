@@ -14,7 +14,9 @@ import TextOverImage from '../components/TextOverImage';
       {/* Search Bar Header */}
       <View style={styles.searchContainer}>
         <Pressable style={styles.searchContainer}
-        onPress={()=> navigation.navigate("Searchbar")}> 
+        onPress={()=> navigation.navigate("Searchbar", {
+          showComponentA: showComponentA,
+        })}> 
          <Text> 🔍 Search for Recipes...</Text>
         </Pressable>
       </View>
