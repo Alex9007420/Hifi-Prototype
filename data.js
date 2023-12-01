@@ -114,7 +114,7 @@ const RecipeData =[
     time: "60",
     src: 'https://res.cloudinary.com/norgesgruppen/images/c_scale,dpr_auto,f_auto,q_auto:eco,w_1600/gpere8ubncwgn53hridh/fish-and-chips',
     tools: ["trashcan", "chef-hat"],
-    ingredients: ["Dough", "Alcohhol", "Fish", "Vegetables"],
+    ingredients: ["Dough", "Alcohol", "Fish", "Vegetables"],
   },
   {
     id: "17",
