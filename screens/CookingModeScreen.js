@@ -10,6 +10,7 @@ import RecipeData from '../data';
 import Ingredients from '../components/Ingredients';
 import IngredientsData from '../IngredientsData';
 import styles from '../components/Styles';
+import TwoColumnIngredientList from '../components/TwoColumnIngredientList';
 // TODO: only import what is actually needed
 const {width, height} = Dimensions.get('window')
 
@@ -71,24 +72,8 @@ export default function CookingMode ({route}){
 }
 const Ingredient = ({ index }) => {
   const iData = IngredientsData.find((item) => item.id === index);
-
   return (
-    <View style={styles.ingredientTextContainer}>
-      <View style={styles.ingredientPadding}>
-        {
-          iData.ingredients.map((ingredient, index) => (
-            <Text key={index} style={styles.ingredientText}>{ingredientQuantity(ingredient)}</Text>
-          ))
-        }
-        </View>
-        <View style={styles.ingredientPadding}>
-        {
-          iData.ingredients.map((ingredient, index) => (
-            <Text>{ingredientDescription(ingredient)}</Text>
-          ))
-        }
-        </View>
-      </View>
+    <TwoColumnIngredientList selectedOption={iData}/>
   );
 };
 
